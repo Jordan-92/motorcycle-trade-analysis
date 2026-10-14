@@ -1,0 +1,1467 @@
+{
+  "snapshot_date": "2026-09-28",
+  "scope": {
+    "name": "European motorcycle trade",
+    "start_year": 2018,
+    "end_year": 2025,
+    "reporters": [
+      "BE",
+      "DE",
+      "FR",
+      "NL",
+      "IT",
+      "ES"
+    ],
+    "products": [
+      "87113090",
+      "87114000",
+      "87115000"
+    ],
+    "flows": [
+      "1",
+      "2"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "55ad67b646feebd9-50606985277f2d16",
+      "provider": "eurostat",
+      "request_id": "55ad67b646feebd938d4ea8dcceedc5bd4e836a71359d79a5a28c477e5d3d4a2",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=BE&sinceTimePeriod=2018-01&untilTimePeriod=2018-12",
+      "sha256": "50606985277f2d16d3cff34d13c1dccce631a39a9bb071d3c83130fff9b43abb",
+      "path": "data/raw/eurostat/55ad67b646feebd938d4ea8dcceedc5bd4e836a71359d79a5a28c477e5d3d4a2/50606985277f2d16d3cff34d13c1dccce631a39a9bb071d3c83130fff9b43abb.json",
+      "bytes": 28687,
+      "retrieved_at": "2026-09-28T08:56:54.942726+00:00"
+    },
+    {
+      "source_id": "c4f62e7c6128ac25-06ded2e249b0fd19",
+      "provider": "eurostat",
+      "request_id": "c4f62e7c6128ac254def25addbbead39704659a0916fe7dc60563281a582d3cf",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=BE&sinceTimePeriod=2019-01&untilTimePeriod=2019-12",
+      "sha256": "06ded2e249b0fd19b8a0a4fc4cccc3058d7c0810087e2c149ee0c1950d69a555",
+      "path": "data/raw/eurostat/c4f62e7c6128ac254def25addbbead39704659a0916fe7dc60563281a582d3cf/06ded2e249b0fd19b8a0a4fc4cccc3058d7c0810087e2c149ee0c1950d69a555.json",
+      "bytes": 28692,
+      "retrieved_at": "2026-09-28T08:56:56.235179+00:00"
+    },
+    {
+      "source_id": "f9b0b1432f6da6c6-7931f6d38f124918",
+      "provider": "eurostat",
+      "request_id": "f9b0b1432f6da6c69c0f362034a32eebe9c6c9cf3b382047017efac57bb171fe",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=BE&sinceTimePeriod=2020-01&untilTimePeriod=2020-12",
+      "sha256": "7931f6d38f124918310b143879705634eb2f53cf1f82e5cc8c4408766868a966",
+      "path": "data/raw/eurostat/f9b0b1432f6da6c69c0f362034a32eebe9c6c9cf3b382047017efac57bb171fe/7931f6d38f124918310b143879705634eb2f53cf1f82e5cc8c4408766868a966.json",
+      "bytes": 28120,
+      "retrieved_at": "2026-09-28T08:56:57.533806+00:00"
+    },
+    {
+      "source_id": "258f7918fda11286-f8d885c14c8b31ab",
+      "provider": "eurostat",
+      "request_id": "258f7918fda112866737e624f16bf0bf1d533aa04e574c189419a9d42c7f5bb5",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=BE&sinceTimePeriod=2021-01&untilTimePeriod=2021-12",
+      "sha256": "f8d885c14c8b31ab755dfd8cca1ae6b1891f5538e2c3db501de62bcc2f82a083",
+      "path": "data/raw/eurostat/258f7918fda112866737e624f16bf0bf1d533aa04e574c189419a9d42c7f5bb5/f8d885c14c8b31ab755dfd8cca1ae6b1891f5538e2c3db501de62bcc2f82a083.json",
+      "bytes": 29915,
+      "retrieved_at": "2026-09-28T08:56:58.783184+00:00"
+    },
+    {
+      "source_id": "f5568b3ce5e5053c-14876f3d88c90e5c",
+      "provider": "eurostat",
+      "request_id": "f5568b3ce5e5053cb1950b7377f5d234969d04b61fd79847833640288b99aa3e",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=BE&sinceTimePeriod=2022-01&untilTimePeriod=2022-12",
+      "sha256": "14876f3d88c90e5c68d7e635c01ccfc6f12a5d5e9ad5dda2ceddf57b9c99597b",
+      "path": "data/raw/eurostat/f5568b3ce5e5053cb1950b7377f5d234969d04b61fd79847833640288b99aa3e/14876f3d88c90e5c68d7e635c01ccfc6f12a5d5e9ad5dda2ceddf57b9c99597b.json",
+      "bytes": 28965,
+      "retrieved_at": "2026-09-28T08:57:00.095711+00:00"
+    },
+    {
+      "source_id": "01cb645ea366ebbe-7bc85919863c7a5b",
+      "provider": "eurostat",
+      "request_id": "01cb645ea366ebbea2141266da10cd51957f61473dc5e765eaf527bb45a33c06",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=BE&sinceTimePeriod=2023-01&untilTimePeriod=2023-12",
+      "sha256": "7bc85919863c7a5bde951125277fda12554681f4d8fd829e7b1b226e20b9d428",
+      "path": "data/raw/eurostat/01cb645ea366ebbea2141266da10cd51957f61473dc5e765eaf527bb45a33c06/7bc85919863c7a5bde951125277fda12554681f4d8fd829e7b1b226e20b9d428.json",
+      "bytes": 29156,
+      "retrieved_at": "2026-09-28T08:57:01.562065+00:00"
+    },
+    {
+      "source_id": "830df3a8a54ff315-067b586b56a54311",
+      "provider": "eurostat",
+      "request_id": "830df3a8a54ff315db77c96c5fce1c061bb1e14c8ba1041a83e56a91ca710f48",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=BE&sinceTimePeriod=2024-01&untilTimePeriod=2024-12",
+      "sha256": "067b586b56a543112433215bce3dd2a268a6d345cad036fcc2a0a03c24691649",
+      "path": "data/raw/eurostat/830df3a8a54ff315db77c96c5fce1c061bb1e14c8ba1041a83e56a91ca710f48/067b586b56a543112433215bce3dd2a268a6d345cad036fcc2a0a03c24691649.json",
+      "bytes": 29674,
+      "retrieved_at": "2026-09-28T08:57:02.820692+00:00"
+    },
+    {
+      "source_id": "1418a04158f1dac3-17f18d2dcb08c583",
+      "provider": "eurostat",
+      "request_id": "1418a04158f1dac3165c886ddcbedc9f129cf44ad774ce1eefe318e6f83c0d76",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=BE&sinceTimePeriod=2025-01&untilTimePeriod=2025-12",
+      "sha256": "17f18d2dcb08c58363064e393c3a56ab243792642e5bea34cba19a228460a289",
+      "path": "data/raw/eurostat/1418a04158f1dac3165c886ddcbedc9f129cf44ad774ce1eefe318e6f83c0d76/17f18d2dcb08c58363064e393c3a56ab243792642e5bea34cba19a228460a289.json",
+      "bytes": 29798,
+      "retrieved_at": "2026-09-28T08:57:04.210871+00:00"
+    },
+    {
+      "source_id": "25150c188c0aecfa-27470dce40296938",
+      "provider": "eurostat",
+      "request_id": "25150c188c0aecfa1d2fd16d2421a3609ba37d26d45550afef8271a3090a97d6",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=BE&sinceTimePeriod=2018-01&untilTimePeriod=2018-12",
+      "sha256": "27470dce4029693873fd9633bcde16851a465d373b9ddaa7b9de8702f3e24efb",
+      "path": "data/raw/eurostat/25150c188c0aecfa1d2fd16d2421a3609ba37d26d45550afef8271a3090a97d6/27470dce4029693873fd9633bcde16851a465d373b9ddaa7b9de8702f3e24efb.json",
+      "bytes": 34983,
+      "retrieved_at": "2026-09-28T08:57:05.461973+00:00"
+    },
+    {
+      "source_id": "861be1b9307e9ed0-858dcb5a613da017",
+      "provider": "eurostat",
+      "request_id": "861be1b9307e9ed082894f38a578cc90cecb080c841bb9654cca70fc9ed0f977",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=BE&sinceTimePeriod=2019-01&untilTimePeriod=2019-12",
+      "sha256": "858dcb5a613da017bb23933a5d40bd315b304d0ecea8f49b6affb55f051a4008",
+      "path": "data/raw/eurostat/861be1b9307e9ed082894f38a578cc90cecb080c841bb9654cca70fc9ed0f977/858dcb5a613da017bb23933a5d40bd315b304d0ecea8f49b6affb55f051a4008.json",
+      "bytes": 33797,
+      "retrieved_at": "2026-09-28T08:57:06.767762+00:00"
+    },
+    {
+      "source_id": "9f2e1bf41a6841f1-e4e0fa0e42add5af",
+      "provider": "eurostat",
+      "request_id": "9f2e1bf41a6841f1590c78c3d642dd41722957867fc280507459e7d3a66e7ea6",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=BE&sinceTimePeriod=2020-01&untilTimePeriod=2020-12",
+      "sha256": "e4e0fa0e42add5af60eec3d53e7e35e34c38c13be2987260e58d614fd5d0af3f",
+      "path": "data/raw/eurostat/9f2e1bf41a6841f1590c78c3d642dd41722957867fc280507459e7d3a66e7ea6/e4e0fa0e42add5af60eec3d53e7e35e34c38c13be2987260e58d614fd5d0af3f.json",
+      "bytes": 33276,
+      "retrieved_at": "2026-09-28T08:57:08.107061+00:00"
+    },
+    {
+      "source_id": "3a78396a252760bd-477b44e2d90041eb",
+      "provider": "eurostat",
+      "request_id": "3a78396a252760bd7b9ad7b97a73b5d70a1f191ebb58652dbabd3712d6430e1e",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=BE&sinceTimePeriod=2021-01&untilTimePeriod=2021-12",
+      "sha256": "477b44e2d90041eb77241cb1237eee2c9fba24e56bdf3b8649d962c4debd4d95",
+      "path": "data/raw/eurostat/3a78396a252760bd7b9ad7b97a73b5d70a1f191ebb58652dbabd3712d6430e1e/477b44e2d90041eb77241cb1237eee2c9fba24e56bdf3b8649d962c4debd4d95.json",
+      "bytes": 31210,
+      "retrieved_at": "2026-09-28T08:57:09.232877+00:00"
+    },
+    {
+      "source_id": "864dd29fab1bd525-2a919eb7abf43024",
+      "provider": "eurostat",
+      "request_id": "864dd29fab1bd52539c314d0961f0230c0a49172e5309710eb6b14f18435c774",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=BE&sinceTimePeriod=2022-01&untilTimePeriod=2022-12",
+      "sha256": "2a919eb7abf43024a55bcbd20f6db80dad30cd3eed9cce9f6da2d0f371bc03e1",
+      "path": "data/raw/eurostat/864dd29fab1bd52539c314d0961f0230c0a49172e5309710eb6b14f18435c774/2a919eb7abf43024a55bcbd20f6db80dad30cd3eed9cce9f6da2d0f371bc03e1.json",
+      "bytes": 31236,
+      "retrieved_at": "2026-09-28T08:57:10.414936+00:00"
+    },
+    {
+      "source_id": "d9ec9b605261c44d-7cdf79488bccabea",
+      "provider": "eurostat",
+      "request_id": "d9ec9b605261c44d9d6ad0a8bf9336a9363083eadc8cebad28f65078950c73a5",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=BE&sinceTimePeriod=2023-01&untilTimePeriod=2023-12",
+      "sha256": "7cdf79488bccabea7a82b825a4de4ca55c8e2d5ccb59257be273bef3652613c7",
+      "path": "data/raw/eurostat/d9ec9b605261c44d9d6ad0a8bf9336a9363083eadc8cebad28f65078950c73a5/7cdf79488bccabea7a82b825a4de4ca55c8e2d5ccb59257be273bef3652613c7.json",
+      "bytes": 31927,
+      "retrieved_at": "2026-09-28T08:57:11.553198+00:00"
+    },
+    {
+      "source_id": "5607dfebe2d9eb3d-b140d43a796684d4",
+      "provider": "eurostat",
+      "request_id": "5607dfebe2d9eb3d216517e4f3d07a7b4c0b11a24bb0f4f7dbab1e9ee7d7a3e6",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=BE&sinceTimePeriod=2024-01&untilTimePeriod=2024-12",
+      "sha256": "b140d43a796684d4d6164e2451f71f2540c6c3d0846fbcc6e3ccb1cea495eabd",
+      "path": "data/raw/eurostat/5607dfebe2d9eb3d216517e4f3d07a7b4c0b11a24bb0f4f7dbab1e9ee7d7a3e6/b140d43a796684d4d6164e2451f71f2540c6c3d0846fbcc6e3ccb1cea495eabd.json",
+      "bytes": 31872,
+      "retrieved_at": "2026-09-28T08:57:12.896748+00:00"
+    },
+    {
+      "source_id": "4343edf501cae07b-fb64b5949521ec4f",
+      "provider": "eurostat",
+      "request_id": "4343edf501cae07b726271f280ee4d74d09c8be7c46083062fa1bc77d0e5a4a8",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=BE&sinceTimePeriod=2025-01&untilTimePeriod=2025-12",
+      "sha256": "fb64b5949521ec4f3b301a1c149252f9145c032f9e38c39fc5a89c813a2aefa9",
+      "path": "data/raw/eurostat/4343edf501cae07b726271f280ee4d74d09c8be7c46083062fa1bc77d0e5a4a8/fb64b5949521ec4f3b301a1c149252f9145c032f9e38c39fc5a89c813a2aefa9.json",
+      "bytes": 31592,
+      "retrieved_at": "2026-09-28T08:57:14.436737+00:00"
+    },
+    {
+      "source_id": "440ae997f8250edf-994a206de6c4ccee",
+      "provider": "eurostat",
+      "request_id": "440ae997f8250edf469b6014f46688aafd8a61bcd0167b6a5b8254a58b90efb8",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=BE&sinceTimePeriod=2018-01&untilTimePeriod=2018-12",
+      "sha256": "994a206de6c4ccee3be945d0a05fc19e2a7eb629ad98ccf2663bbceb8b2da27c",
+      "path": "data/raw/eurostat/440ae997f8250edf469b6014f46688aafd8a61bcd0167b6a5b8254a58b90efb8/994a206de6c4ccee3be945d0a05fc19e2a7eb629ad98ccf2663bbceb8b2da27c.json",
+      "bytes": 42271,
+      "retrieved_at": "2026-09-28T08:57:15.762017+00:00"
+    },
+    {
+      "source_id": "a218d66c215e583c-0220785735d74b87",
+      "provider": "eurostat",
+      "request_id": "a218d66c215e583ce51355036292261e312cc46a02a3f9dd4962b8471ebe5b61",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=BE&sinceTimePeriod=2019-01&untilTimePeriod=2019-12",
+      "sha256": "0220785735d74b87e16204d1fcfe5c7ead05268200b494454e059dd1f6cf47b4",
+      "path": "data/raw/eurostat/a218d66c215e583ce51355036292261e312cc46a02a3f9dd4962b8471ebe5b61/0220785735d74b87e16204d1fcfe5c7ead05268200b494454e059dd1f6cf47b4.json",
+      "bytes": 43341,
+      "retrieved_at": "2026-09-28T08:57:17.036217+00:00"
+    },
+    {
+      "source_id": "8b64c8759e4cd10b-1dcdc79d0c597af9",
+      "provider": "eurostat",
+      "request_id": "8b64c8759e4cd10b1ee5bc5567e79aa825c1bbcaf9653642ce2b971863597b33",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=BE&sinceTimePeriod=2020-01&untilTimePeriod=2020-12",
+      "sha256": "1dcdc79d0c597af973c3a254e297b8eb6940d9ae5214ca4f3bd77011190b0992",
+      "path": "data/raw/eurostat/8b64c8759e4cd10b1ee5bc5567e79aa825c1bbcaf9653642ce2b971863597b33/1dcdc79d0c597af973c3a254e297b8eb6940d9ae5214ca4f3bd77011190b0992.json",
+      "bytes": 43084,
+      "retrieved_at": "2026-09-28T08:57:18.454758+00:00"
+    },
+    {
+      "source_id": "6429597b240c1729-39255f09736ebfb9",
+      "provider": "eurostat",
+      "request_id": "6429597b240c1729bfa6b44a6ac87740ad0f329da75f4d226d2696cdeac58e4e",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=BE&sinceTimePeriod=2021-01&untilTimePeriod=2021-12",
+      "sha256": "39255f09736ebfb9e801cfe09eabaddace6b3bfb74174bf57ff5ee78c8931bf6",
+      "path": "data/raw/eurostat/6429597b240c1729bfa6b44a6ac87740ad0f329da75f4d226d2696cdeac58e4e/39255f09736ebfb9e801cfe09eabaddace6b3bfb74174bf57ff5ee78c8931bf6.json",
+      "bytes": 42428,
+      "retrieved_at": "2026-09-28T08:57:19.608836+00:00"
+    },
+    {
+      "source_id": "907eb915b50ff016-9cb7168f7911dc7e",
+      "provider": "eurostat",
+      "request_id": "907eb915b50ff016061269983f1aa1637759570a2da1b04f7a75859ce0972b62",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=BE&sinceTimePeriod=2022-01&untilTimePeriod=2022-12",
+      "sha256": "9cb7168f7911dc7e84b124ec47a8bac3fb015ed7c913a1114f6d2e44c48b9af2",
+      "path": "data/raw/eurostat/907eb915b50ff016061269983f1aa1637759570a2da1b04f7a75859ce0972b62/9cb7168f7911dc7e84b124ec47a8bac3fb015ed7c913a1114f6d2e44c48b9af2.json",
+      "bytes": 42448,
+      "retrieved_at": "2026-09-28T08:57:20.991983+00:00"
+    },
+    {
+      "source_id": "8e1e5f7ae9595f58-cab9aae63c5a09f7",
+      "provider": "eurostat",
+      "request_id": "8e1e5f7ae9595f5863d9a5f1d35af2d1582e4a09c78252040563ddcf1bcc466b",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=BE&sinceTimePeriod=2023-01&untilTimePeriod=2023-12",
+      "sha256": "cab9aae63c5a09f70755a1e509d03f90da68231a9d2283934ba1696a9f4db234",
+      "path": "data/raw/eurostat/8e1e5f7ae9595f5863d9a5f1d35af2d1582e4a09c78252040563ddcf1bcc466b/cab9aae63c5a09f70755a1e509d03f90da68231a9d2283934ba1696a9f4db234.json",
+      "bytes": 41236,
+      "retrieved_at": "2026-09-28T08:57:22.445388+00:00"
+    },
+    {
+      "source_id": "33c485c8281588ce-9af5301a029a878b",
+      "provider": "eurostat",
+      "request_id": "33c485c8281588cee3cbba2b7ca83c60bea90f9fab83a4b57540a2c02b8f6fd9",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=BE&sinceTimePeriod=2024-01&untilTimePeriod=2024-12",
+      "sha256": "9af5301a029a878b5ae214572b7c152021825ccec61d7789ca9edfc9debe01ca",
+      "path": "data/raw/eurostat/33c485c8281588cee3cbba2b7ca83c60bea90f9fab83a4b57540a2c02b8f6fd9/9af5301a029a878b5ae214572b7c152021825ccec61d7789ca9edfc9debe01ca.json",
+      "bytes": 40566,
+      "retrieved_at": "2026-09-28T08:57:23.696067+00:00"
+    },
+    {
+      "source_id": "281c0a3474da0475-36697c7a92e5d44d",
+      "provider": "eurostat",
+      "request_id": "281c0a3474da0475d1a9f2960d47f6f755652f0fff11d8a55653f896eaa6f434",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=BE&sinceTimePeriod=2025-01&untilTimePeriod=2025-12",
+      "sha256": "36697c7a92e5d44db7e580c330b39df98400cf608e52f8d3adf7663a12e0b479",
+      "path": "data/raw/eurostat/281c0a3474da0475d1a9f2960d47f6f755652f0fff11d8a55653f896eaa6f434/36697c7a92e5d44db7e580c330b39df98400cf608e52f8d3adf7663a12e0b479.json",
+      "bytes": 43942,
+      "retrieved_at": "2026-09-28T08:57:25.020647+00:00"
+    },
+    {
+      "source_id": "bfae5db60ae45c97-835de885c6fd3a4a",
+      "provider": "eurostat",
+      "request_id": "bfae5db60ae45c97dc44d4dcc1c2f2b16279a103cd1861904258ab6c0102e26c",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=DE&sinceTimePeriod=2018-01&untilTimePeriod=2018-12",
+      "sha256": "835de885c6fd3a4a58c5fe3db3c76798c3805637242b5eecccd3e5525c02caa7",
+      "path": "data/raw/eurostat/bfae5db60ae45c97dc44d4dcc1c2f2b16279a103cd1861904258ab6c0102e26c/835de885c6fd3a4a58c5fe3db3c76798c3805637242b5eecccd3e5525c02caa7.json",
+      "bytes": 36183,
+      "retrieved_at": "2026-09-28T09:04:05.071329+00:00"
+    },
+    {
+      "source_id": "0794d54d98b76909-6bf88cef031de2ed",
+      "provider": "eurostat",
+      "request_id": "0794d54d98b769090489e64830d4e0cd62a2a4c499ef1a33601a382e2e63a64a",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=DE&sinceTimePeriod=2019-01&untilTimePeriod=2019-12",
+      "sha256": "6bf88cef031de2ed158b7d58dccfe3668fb5bf9548ff6baef4f0b15967aa95cb",
+      "path": "data/raw/eurostat/0794d54d98b769090489e64830d4e0cd62a2a4c499ef1a33601a382e2e63a64a/6bf88cef031de2ed158b7d58dccfe3668fb5bf9548ff6baef4f0b15967aa95cb.json",
+      "bytes": 38291,
+      "retrieved_at": "2026-09-28T09:04:06.589186+00:00"
+    },
+    {
+      "source_id": "60d5b924689f05d7-c1886ba2a3ae7c21",
+      "provider": "eurostat",
+      "request_id": "60d5b924689f05d7bad7d7901180d5b4d8971b74f639d51f1da8b373f7616964",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=DE&sinceTimePeriod=2020-01&untilTimePeriod=2020-12",
+      "sha256": "c1886ba2a3ae7c21fdc97221f7feb50905558d8f3a5d5484a9be28154ed3f958",
+      "path": "data/raw/eurostat/60d5b924689f05d7bad7d7901180d5b4d8971b74f639d51f1da8b373f7616964/c1886ba2a3ae7c21fdc97221f7feb50905558d8f3a5d5484a9be28154ed3f958.json",
+      "bytes": 38216,
+      "retrieved_at": "2026-09-28T09:04:08.009667+00:00"
+    },
+    {
+      "source_id": "11e8d5be72b0e64d-c55d9708f3ccb9a3",
+      "provider": "eurostat",
+      "request_id": "11e8d5be72b0e64d3c4f17f871b80c258bb0c4b9e1df3dba327b04f9441bd682",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=DE&sinceTimePeriod=2021-01&untilTimePeriod=2021-12",
+      "sha256": "c55d9708f3ccb9a301943de5cc716d8e462fb96d0bb2121b0e9e736f02c24797",
+      "path": "data/raw/eurostat/11e8d5be72b0e64d3c4f17f871b80c258bb0c4b9e1df3dba327b04f9441bd682/c55d9708f3ccb9a301943de5cc716d8e462fb96d0bb2121b0e9e736f02c24797.json",
+      "bytes": 37699,
+      "retrieved_at": "2026-09-28T09:04:09.579179+00:00"
+    },
+    {
+      "source_id": "1d87e5cef3b0ab02-78dbfa554ef7c89c",
+      "provider": "eurostat",
+      "request_id": "1d87e5cef3b0ab02897aa5eaac84a3aa8dfb044899a225de2a0487f03af02127",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=DE&sinceTimePeriod=2022-01&untilTimePeriod=2022-12",
+      "sha256": "78dbfa554ef7c89c3785acb6e53a71aa875830e0bcab28c6d4d8ad158b405384",
+      "path": "data/raw/eurostat/1d87e5cef3b0ab02897aa5eaac84a3aa8dfb044899a225de2a0487f03af02127/78dbfa554ef7c89c3785acb6e53a71aa875830e0bcab28c6d4d8ad158b405384.json",
+      "bytes": 39251,
+      "retrieved_at": "2026-09-28T09:04:11.012603+00:00"
+    },
+    {
+      "source_id": "a76bafc3f18f2dae-9971b2e0b71ded06",
+      "provider": "eurostat",
+      "request_id": "a76bafc3f18f2daeb283e0f6c0c9a994ae6966e774a1b10fdffc9b59151d1026",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=DE&sinceTimePeriod=2023-01&untilTimePeriod=2023-12",
+      "sha256": "9971b2e0b71ded0644d1a7f80e1e618e458aceba9380ff80d027728065e64abd",
+      "path": "data/raw/eurostat/a76bafc3f18f2daeb283e0f6c0c9a994ae6966e774a1b10fdffc9b59151d1026/9971b2e0b71ded0644d1a7f80e1e618e458aceba9380ff80d027728065e64abd.json",
+      "bytes": 39666,
+      "retrieved_at": "2026-09-28T09:04:12.549953+00:00"
+    },
+    {
+      "source_id": "3636e0c9ee03b730-64dd591572b31b5b",
+      "provider": "eurostat",
+      "request_id": "3636e0c9ee03b730773a430534ce92deb7301f60672c0d242ead8e7d4b20d3be",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=DE&sinceTimePeriod=2024-01&untilTimePeriod=2024-12",
+      "sha256": "64dd591572b31b5bdda66f76ed52f11f0f909aeea7b938fd74125787591c5905",
+      "path": "data/raw/eurostat/3636e0c9ee03b730773a430534ce92deb7301f60672c0d242ead8e7d4b20d3be/64dd591572b31b5bdda66f76ed52f11f0f909aeea7b938fd74125787591c5905.json",
+      "bytes": 40863,
+      "retrieved_at": "2026-09-28T09:04:14.182445+00:00"
+    },
+    {
+      "source_id": "09ef631d3d5d659d-7853771cb99484e0",
+      "provider": "eurostat",
+      "request_id": "09ef631d3d5d659df6ac8b036c67f49fb72709c24afec71a01dfb777c4eeb949",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=DE&sinceTimePeriod=2025-01&untilTimePeriod=2025-12",
+      "sha256": "7853771cb99484e07ae21188c4a2a6be57ec1becfd6392dd5563fdbbf0068742",
+      "path": "data/raw/eurostat/09ef631d3d5d659df6ac8b036c67f49fb72709c24afec71a01dfb777c4eeb949/7853771cb99484e07ae21188c4a2a6be57ec1becfd6392dd5563fdbbf0068742.json",
+      "bytes": 37934,
+      "retrieved_at": "2026-09-28T09:04:15.601003+00:00"
+    },
+    {
+      "source_id": "ee124210bcb0c0df-51153450b210672f",
+      "provider": "eurostat",
+      "request_id": "ee124210bcb0c0dfad01dc5c5990d7cbf993fa5b5b45d1abc39f65b8a5383b44",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=DE&sinceTimePeriod=2018-01&untilTimePeriod=2018-12",
+      "sha256": "51153450b210672fa6d306e78edab0b66afafff5c3a2c539e0f81cc06a5f7722",
+      "path": "data/raw/eurostat/ee124210bcb0c0dfad01dc5c5990d7cbf993fa5b5b45d1abc39f65b8a5383b44/51153450b210672fa6d306e78edab0b66afafff5c3a2c539e0f81cc06a5f7722.json",
+      "bytes": 50065,
+      "retrieved_at": "2026-09-28T09:04:17.143235+00:00"
+    },
+    {
+      "source_id": "abe543f78b035826-4d2c80112bfd3be6",
+      "provider": "eurostat",
+      "request_id": "abe543f78b0358268c6b9a51d216c41da9afcb0bf62d30eea6e399c50f8983c0",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=DE&sinceTimePeriod=2019-01&untilTimePeriod=2019-12",
+      "sha256": "4d2c80112bfd3be667aa76689a7894083f5b2477b51c8a6736f172c0216854f1",
+      "path": "data/raw/eurostat/abe543f78b0358268c6b9a51d216c41da9afcb0bf62d30eea6e399c50f8983c0/4d2c80112bfd3be667aa76689a7894083f5b2477b51c8a6736f172c0216854f1.json",
+      "bytes": 48986,
+      "retrieved_at": "2026-09-28T09:04:18.513923+00:00"
+    },
+    {
+      "source_id": "9f9bce1074c3f16d-bf4419631651c306",
+      "provider": "eurostat",
+      "request_id": "9f9bce1074c3f16d306bd54b9e2362ef9cb258c28f6a3153f407fc1b848e3f2f",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=DE&sinceTimePeriod=2020-01&untilTimePeriod=2020-12",
+      "sha256": "bf4419631651c3068c292661d7479d47aac0ee4e9713ce1a0a834f1e44c6d44f",
+      "path": "data/raw/eurostat/9f9bce1074c3f16d306bd54b9e2362ef9cb258c28f6a3153f407fc1b848e3f2f/bf4419631651c3068c292661d7479d47aac0ee4e9713ce1a0a834f1e44c6d44f.json",
+      "bytes": 46427,
+      "retrieved_at": "2026-09-28T09:04:19.711072+00:00"
+    },
+    {
+      "source_id": "ddf92040fc769a2c-a71ba1a8c2da61d0",
+      "provider": "eurostat",
+      "request_id": "ddf92040fc769a2c21b448ebdedcdeb587aa8f0b5ad81f9e0606973ac41eb62f",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=DE&sinceTimePeriod=2021-01&untilTimePeriod=2021-12",
+      "sha256": "a71ba1a8c2da61d0d690a3b15be0875b624b736a7e8be5266444acc8fbabc3c6",
+      "path": "data/raw/eurostat/ddf92040fc769a2c21b448ebdedcdeb587aa8f0b5ad81f9e0606973ac41eb62f/a71ba1a8c2da61d0d690a3b15be0875b624b736a7e8be5266444acc8fbabc3c6.json",
+      "bytes": 44358,
+      "retrieved_at": "2026-09-28T09:04:21.249566+00:00"
+    },
+    {
+      "source_id": "c235996787096c04-d4f1e84ea8e67b03",
+      "provider": "eurostat",
+      "request_id": "c235996787096c0436c50cafc2607dbeb0d60e8b09aff2a1ce76cd8efc1709ab",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=DE&sinceTimePeriod=2022-01&untilTimePeriod=2022-12",
+      "sha256": "d4f1e84ea8e67b03e82cd7d9338bfa766af447d5ec9e9e3954d71cb8e1947bda",
+      "path": "data/raw/eurostat/c235996787096c0436c50cafc2607dbeb0d60e8b09aff2a1ce76cd8efc1709ab/d4f1e84ea8e67b03e82cd7d9338bfa766af447d5ec9e9e3954d71cb8e1947bda.json",
+      "bytes": 45098,
+      "retrieved_at": "2026-09-28T09:04:22.605255+00:00"
+    },
+    {
+      "source_id": "b2744d6daa6b2cbf-4e79bcea9f95a62e",
+      "provider": "eurostat",
+      "request_id": "b2744d6daa6b2cbf45c3de5a2f7f409e58a052268463ff2f3b568b92e6348f28",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=DE&sinceTimePeriod=2023-01&untilTimePeriod=2023-12",
+      "sha256": "4e79bcea9f95a62eb9ac281f1c82e7d7c48474063c4612dfe02a4fd54a449e6f",
+      "path": "data/raw/eurostat/b2744d6daa6b2cbf45c3de5a2f7f409e58a052268463ff2f3b568b92e6348f28/4e79bcea9f95a62eb9ac281f1c82e7d7c48474063c4612dfe02a4fd54a449e6f.json",
+      "bytes": 45689,
+      "retrieved_at": "2026-09-28T09:04:24.140056+00:00"
+    },
+    {
+      "source_id": "48cb08f30cc5e673-73e0f148227c417c",
+      "provider": "eurostat",
+      "request_id": "48cb08f30cc5e67320be92c0475cd10a6196d6d7d18cb71ec7012e18934781de",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=DE&sinceTimePeriod=2024-01&untilTimePeriod=2024-12",
+      "sha256": "73e0f148227c417c4feef4f6bf8e922bad096bed6fa7aefbd52b5a3af59c3432",
+      "path": "data/raw/eurostat/48cb08f30cc5e67320be92c0475cd10a6196d6d7d18cb71ec7012e18934781de/73e0f148227c417c4feef4f6bf8e922bad096bed6fa7aefbd52b5a3af59c3432.json",
+      "bytes": 45562,
+      "retrieved_at": "2026-09-28T09:04:25.621590+00:00"
+    },
+    {
+      "source_id": "14a933979796b3e1-a30275fcae640b21",
+      "provider": "eurostat",
+      "request_id": "14a933979796b3e1a74082247f7e0b5ba0584abca00303084fbcdee451a3119c",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=DE&sinceTimePeriod=2025-01&untilTimePeriod=2025-12",
+      "sha256": "a30275fcae640b2128409b8e223c29c431cb4185765577947e65d50e54f0b2e5",
+      "path": "data/raw/eurostat/14a933979796b3e1a74082247f7e0b5ba0584abca00303084fbcdee451a3119c/a30275fcae640b2128409b8e223c29c431cb4185765577947e65d50e54f0b2e5.json",
+      "bytes": 44078,
+      "retrieved_at": "2026-09-28T09:04:26.958647+00:00"
+    },
+    {
+      "source_id": "029a74a5438940e6-bd96ef3feb636a0e",
+      "provider": "eurostat",
+      "request_id": "029a74a5438940e6b46e9ff57e0420254a4373b68f50991d27b0a4792aab9782",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=DE&sinceTimePeriod=2018-01&untilTimePeriod=2018-12",
+      "sha256": "bd96ef3feb636a0ece0cea83f47af3071879bb02e4ddf65cd850fe9d6c7d9c96",
+      "path": "data/raw/eurostat/029a74a5438940e6b46e9ff57e0420254a4373b68f50991d27b0a4792aab9782/bd96ef3feb636a0ece0cea83f47af3071879bb02e4ddf65cd850fe9d6c7d9c96.json",
+      "bytes": 61929,
+      "retrieved_at": "2026-09-28T09:04:28.525345+00:00"
+    },
+    {
+      "source_id": "a44dabba674f0547-8fbd76b60253d1fd",
+      "provider": "eurostat",
+      "request_id": "a44dabba674f054729c7e80aa5df27394b12ce05290322a3f376261a7a36d321",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=DE&sinceTimePeriod=2019-01&untilTimePeriod=2019-12",
+      "sha256": "8fbd76b60253d1fd5f64b5f714d6c538b02b8452c9989a2cca832bb39174c65b",
+      "path": "data/raw/eurostat/a44dabba674f054729c7e80aa5df27394b12ce05290322a3f376261a7a36d321/8fbd76b60253d1fd5f64b5f714d6c538b02b8452c9989a2cca832bb39174c65b.json",
+      "bytes": 62894,
+      "retrieved_at": "2026-09-28T09:04:30.131972+00:00"
+    },
+    {
+      "source_id": "3d8edac8c40820a4-f56790c22b1cfd13",
+      "provider": "eurostat",
+      "request_id": "3d8edac8c40820a497d5460c38c8a841db2efd8826fec86d390fca2555d08d0d",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=DE&sinceTimePeriod=2020-01&untilTimePeriod=2020-12",
+      "sha256": "f56790c22b1cfd1314652ed5ab676b8c7a43fa66a0d84fd4d285f1366db0f9f0",
+      "path": "data/raw/eurostat/3d8edac8c40820a497d5460c38c8a841db2efd8826fec86d390fca2555d08d0d/f56790c22b1cfd1314652ed5ab676b8c7a43fa66a0d84fd4d285f1366db0f9f0.json",
+      "bytes": 61514,
+      "retrieved_at": "2026-09-28T09:04:31.714804+00:00"
+    },
+    {
+      "source_id": "15a428bf9574b135-7497b6f63ebaf08b",
+      "provider": "eurostat",
+      "request_id": "15a428bf9574b1351c76a18dc841faa5fc1bb80a93ad086ad233a9ec74e2c6c7",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=DE&sinceTimePeriod=2021-01&untilTimePeriod=2021-12",
+      "sha256": "7497b6f63ebaf08b75267b35ad3cf6322766b8cecae4552e340b68892cb2d42e",
+      "path": "data/raw/eurostat/15a428bf9574b1351c76a18dc841faa5fc1bb80a93ad086ad233a9ec74e2c6c7/7497b6f63ebaf08b75267b35ad3cf6322766b8cecae4552e340b68892cb2d42e.json",
+      "bytes": 63888,
+      "retrieved_at": "2026-09-28T09:04:33.252238+00:00"
+    },
+    {
+      "source_id": "c89dd87c5ec5918d-a201ba8efebb392e",
+      "provider": "eurostat",
+      "request_id": "c89dd87c5ec5918d0db861e7b22b9d2aa465650f5c73dee97405f65fecad41cf",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=DE&sinceTimePeriod=2022-01&untilTimePeriod=2022-12",
+      "sha256": "a201ba8efebb392e7e0a9b8d24e0b86b8c14ce63b21080d49072bc946f8368f6",
+      "path": "data/raw/eurostat/c89dd87c5ec5918d0db861e7b22b9d2aa465650f5c73dee97405f65fecad41cf/a201ba8efebb392e7e0a9b8d24e0b86b8c14ce63b21080d49072bc946f8368f6.json",
+      "bytes": 64766,
+      "retrieved_at": "2026-09-28T09:04:34.738613+00:00"
+    },
+    {
+      "source_id": "e33b76f3dbf0d230-45ae5e63af7c1179",
+      "provider": "eurostat",
+      "request_id": "e33b76f3dbf0d230d6c2e5133053fae7dedd316ba79ff90a818e836e81477a3b",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=DE&sinceTimePeriod=2023-01&untilTimePeriod=2023-12",
+      "sha256": "45ae5e63af7c11792734c76107de8fa08265e64d74e4afd4158a4f262748bcba",
+      "path": "data/raw/eurostat/e33b76f3dbf0d230d6c2e5133053fae7dedd316ba79ff90a818e836e81477a3b/45ae5e63af7c11792734c76107de8fa08265e64d74e4afd4158a4f262748bcba.json",
+      "bytes": 64994,
+      "retrieved_at": "2026-09-28T09:04:36.240358+00:00"
+    },
+    {
+      "source_id": "916ba69e44ff82d9-5d620a929eadd614",
+      "provider": "eurostat",
+      "request_id": "916ba69e44ff82d95ae9ba575479035eaa449a0012001f7a4f0d1165f7c46551",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=DE&sinceTimePeriod=2024-01&untilTimePeriod=2024-12",
+      "sha256": "5d620a929eadd6145390f11405832956d1ae18e07dafb871413bd7eeb5166327",
+      "path": "data/raw/eurostat/916ba69e44ff82d95ae9ba575479035eaa449a0012001f7a4f0d1165f7c46551/5d620a929eadd6145390f11405832956d1ae18e07dafb871413bd7eeb5166327.json",
+      "bytes": 66405,
+      "retrieved_at": "2026-09-28T09:04:37.829277+00:00"
+    },
+    {
+      "source_id": "2e7245320403cf37-905b020acf93bbe2",
+      "provider": "eurostat",
+      "request_id": "2e7245320403cf379caa9f07eef7db384df5c7ee36071b67c4fb67f363b55e27",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=DE&sinceTimePeriod=2025-01&untilTimePeriod=2025-12",
+      "sha256": "905b020acf93bbe2e373ce4025afaaf1191c67e17424b91e59492ec0342e2702",
+      "path": "data/raw/eurostat/2e7245320403cf379caa9f07eef7db384df5c7ee36071b67c4fb67f363b55e27/905b020acf93bbe2e373ce4025afaaf1191c67e17424b91e59492ec0342e2702.json",
+      "bytes": 66179,
+      "retrieved_at": "2026-09-28T09:04:39.358213+00:00"
+    },
+    {
+      "source_id": "c2ac2886526c7a75-02a490423819e7ab",
+      "provider": "eurostat",
+      "request_id": "c2ac2886526c7a752fcaa1ab6f78da69340f36bee06198c77cce5598741fae8f",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=FR&sinceTimePeriod=2018-01&untilTimePeriod=2018-12",
+      "sha256": "02a490423819e7ab22933e92f9253facd2c88b7e566bb6d48ea3394d1c08899e",
+      "path": "data/raw/eurostat/c2ac2886526c7a752fcaa1ab6f78da69340f36bee06198c77cce5598741fae8f/02a490423819e7ab22933e92f9253facd2c88b7e566bb6d48ea3394d1c08899e.json",
+      "bytes": 36963,
+      "retrieved_at": "2026-09-28T09:04:40.876976+00:00"
+    },
+    {
+      "source_id": "97070a5d950883c8-bd2a31e04ce9b797",
+      "provider": "eurostat",
+      "request_id": "97070a5d950883c870bd1a44ce8da4cfb7344b37c4d222e498128684723a3f1f",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=FR&sinceTimePeriod=2019-01&untilTimePeriod=2019-12",
+      "sha256": "bd2a31e04ce9b7977ec3a1c83d38331adc559c44b639b60f43189e21931d5dae",
+      "path": "data/raw/eurostat/97070a5d950883c870bd1a44ce8da4cfb7344b37c4d222e498128684723a3f1f/bd2a31e04ce9b7977ec3a1c83d38331adc559c44b639b60f43189e21931d5dae.json",
+      "bytes": 38479,
+      "retrieved_at": "2026-09-28T09:04:42.283999+00:00"
+    },
+    {
+      "source_id": "2ac52fd0802b41a1-192b3369790c9eb5",
+      "provider": "eurostat",
+      "request_id": "2ac52fd0802b41a10187d23969f8f522fe8d609046db6e4075f559f3dda88a29",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=FR&sinceTimePeriod=2020-01&untilTimePeriod=2020-12",
+      "sha256": "192b3369790c9eb5ba4374f1e6f69eef0b46f5cbe879d786cee2ce7116979797",
+      "path": "data/raw/eurostat/2ac52fd0802b41a10187d23969f8f522fe8d609046db6e4075f559f3dda88a29/192b3369790c9eb5ba4374f1e6f69eef0b46f5cbe879d786cee2ce7116979797.json",
+      "bytes": 37574,
+      "retrieved_at": "2026-09-28T09:04:43.623669+00:00"
+    },
+    {
+      "source_id": "f46900a2c1c950fa-84bb7b6b2c153bb1",
+      "provider": "eurostat",
+      "request_id": "f46900a2c1c950fa25be62e08703d1d11844fc5e0f27194ddda6628e348ac8e4",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=FR&sinceTimePeriod=2021-01&untilTimePeriod=2021-12",
+      "sha256": "84bb7b6b2c153bb1bec378869a95dc501429c4249eee3f173546669d9b613a4b",
+      "path": "data/raw/eurostat/f46900a2c1c950fa25be62e08703d1d11844fc5e0f27194ddda6628e348ac8e4/84bb7b6b2c153bb1bec378869a95dc501429c4249eee3f173546669d9b613a4b.json",
+      "bytes": 38802,
+      "retrieved_at": "2026-09-28T09:04:45.071354+00:00"
+    },
+    {
+      "source_id": "2af0eff00112aadb-9595e8fccdd4fce4",
+      "provider": "eurostat",
+      "request_id": "2af0eff00112aadb3e4229213e01e6ecf30a8f94bfd1f2c78886ae7c1182de07",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=FR&sinceTimePeriod=2022-01&untilTimePeriod=2022-12",
+      "sha256": "9595e8fccdd4fce41910bce95f97763d6e4edd3edf95385e9793137a3778e2fc",
+      "path": "data/raw/eurostat/2af0eff00112aadb3e4229213e01e6ecf30a8f94bfd1f2c78886ae7c1182de07/9595e8fccdd4fce41910bce95f97763d6e4edd3edf95385e9793137a3778e2fc.json",
+      "bytes": 37884,
+      "retrieved_at": "2026-09-28T09:04:46.489243+00:00"
+    },
+    {
+      "source_id": "c665bd939ca7b2c3-75a9ff005d55482d",
+      "provider": "eurostat",
+      "request_id": "c665bd939ca7b2c353d9fe3a8280c6610fb2c05837b65f6e0d651d58fb9021f5",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=FR&sinceTimePeriod=2023-01&untilTimePeriod=2023-12",
+      "sha256": "75a9ff005d55482d5a6aa90dfad4999225a57d731d7c7b1638c55e0903afd81f",
+      "path": "data/raw/eurostat/c665bd939ca7b2c353d9fe3a8280c6610fb2c05837b65f6e0d651d58fb9021f5/75a9ff005d55482d5a6aa90dfad4999225a57d731d7c7b1638c55e0903afd81f.json",
+      "bytes": 39308,
+      "retrieved_at": "2026-09-28T09:04:47.924899+00:00"
+    },
+    {
+      "source_id": "5c2ef9db79bbb16b-3a3c7f9d686629fd",
+      "provider": "eurostat",
+      "request_id": "5c2ef9db79bbb16b00219ed97d03127a16f9c2a34518ec7a84cffd1b8404060e",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=FR&sinceTimePeriod=2024-01&untilTimePeriod=2024-12",
+      "sha256": "3a3c7f9d686629fd49154f99b5ef597d3872e1a0de818bd23c4a8c902b5a35cc",
+      "path": "data/raw/eurostat/5c2ef9db79bbb16b00219ed97d03127a16f9c2a34518ec7a84cffd1b8404060e/3a3c7f9d686629fd49154f99b5ef597d3872e1a0de818bd23c4a8c902b5a35cc.json",
+      "bytes": 38254,
+      "retrieved_at": "2026-09-28T09:04:49.400273+00:00"
+    },
+    {
+      "source_id": "f409b25cd927d5bf-8c4e9c792336c1fc",
+      "provider": "eurostat",
+      "request_id": "f409b25cd927d5bfc32460d382d7718308168c071554939685cd1217c9fc1185",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=FR&sinceTimePeriod=2025-01&untilTimePeriod=2025-12",
+      "sha256": "8c4e9c792336c1fcac20ff77ccc325a52c6f7b8d2736bbef6878646d3fe88919",
+      "path": "data/raw/eurostat/f409b25cd927d5bfc32460d382d7718308168c071554939685cd1217c9fc1185/8c4e9c792336c1fcac20ff77ccc325a52c6f7b8d2736bbef6878646d3fe88919.json",
+      "bytes": 38520,
+      "retrieved_at": "2026-09-28T09:04:50.967254+00:00"
+    },
+    {
+      "source_id": "42f6cd057375a147-e43f16f8c75578d0",
+      "provider": "eurostat",
+      "request_id": "42f6cd057375a1471f6d40f057fc8d8217f07471b7ea63c415d6c640919f446a",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=FR&sinceTimePeriod=2018-01&untilTimePeriod=2018-12",
+      "sha256": "e43f16f8c75578d094d443ffa24162ca27103239c0096f900c7949094ba61f07",
+      "path": "data/raw/eurostat/42f6cd057375a1471f6d40f057fc8d8217f07471b7ea63c415d6c640919f446a/e43f16f8c75578d094d443ffa24162ca27103239c0096f900c7949094ba61f07.json",
+      "bytes": 39759,
+      "retrieved_at": "2026-09-28T09:04:52.407502+00:00"
+    },
+    {
+      "source_id": "c9e0f6f18a02ce46-19ddb12863f58294",
+      "provider": "eurostat",
+      "request_id": "c9e0f6f18a02ce468743e06c2e9682b4bb70e26c34f9b63f2e190d9239e1c9e7",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=FR&sinceTimePeriod=2019-01&untilTimePeriod=2019-12",
+      "sha256": "19ddb12863f58294d0eb6c78c420e99d3dc60651b8e3d44c288df3d5f0255071",
+      "path": "data/raw/eurostat/c9e0f6f18a02ce468743e06c2e9682b4bb70e26c34f9b63f2e190d9239e1c9e7/19ddb12863f58294d0eb6c78c420e99d3dc60651b8e3d44c288df3d5f0255071.json",
+      "bytes": 41628,
+      "retrieved_at": "2026-09-28T09:04:53.787393+00:00"
+    },
+    {
+      "source_id": "484ed35bf5d3ae94-a1e01abb8f26b755",
+      "provider": "eurostat",
+      "request_id": "484ed35bf5d3ae9456fe094360081630f1cea3041d19f5e4ca2b04dc135b0b56",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=FR&sinceTimePeriod=2020-01&untilTimePeriod=2020-12",
+      "sha256": "a1e01abb8f26b7555f5512ee03ef43b868284b5bc85077a45687ca0dd3530491",
+      "path": "data/raw/eurostat/484ed35bf5d3ae9456fe094360081630f1cea3041d19f5e4ca2b04dc135b0b56/a1e01abb8f26b7555f5512ee03ef43b868284b5bc85077a45687ca0dd3530491.json",
+      "bytes": 41872,
+      "retrieved_at": "2026-09-28T09:04:55.198821+00:00"
+    },
+    {
+      "source_id": "9f9c824c50f7913a-9d7d0e6694413e49",
+      "provider": "eurostat",
+      "request_id": "9f9c824c50f7913a01374914ea992766cf2083b1c9c47c65c4a7ccf986cbe928",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=FR&sinceTimePeriod=2021-01&untilTimePeriod=2021-12",
+      "sha256": "9d7d0e6694413e49615cec65a104e05a97fcf5b650e5c6fc5e1715bd6dbb910b",
+      "path": "data/raw/eurostat/9f9c824c50f7913a01374914ea992766cf2083b1c9c47c65c4a7ccf986cbe928/9d7d0e6694413e49615cec65a104e05a97fcf5b650e5c6fc5e1715bd6dbb910b.json",
+      "bytes": 43834,
+      "retrieved_at": "2026-09-28T09:04:56.661407+00:00"
+    },
+    {
+      "source_id": "f5b0d9f9042878d4-d98fea82f061843f",
+      "provider": "eurostat",
+      "request_id": "f5b0d9f9042878d4bb4b07cbc0d045d783d911992b904ea3c9815f0237f24bbe",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=FR&sinceTimePeriod=2022-01&untilTimePeriod=2022-12",
+      "sha256": "d98fea82f061843f21839c32b9afb48ff0ffa3bf7d928046a59caadfc2bbda59",
+      "path": "data/raw/eurostat/f5b0d9f9042878d4bb4b07cbc0d045d783d911992b904ea3c9815f0237f24bbe/d98fea82f061843f21839c32b9afb48ff0ffa3bf7d928046a59caadfc2bbda59.json",
+      "bytes": 43654,
+      "retrieved_at": "2026-09-28T09:04:57.888803+00:00"
+    },
+    {
+      "source_id": "4aa0ff5ef64902eb-29fd6287cea3d5ea",
+      "provider": "eurostat",
+      "request_id": "4aa0ff5ef64902ebcd157db91babc38d20c41d39ddb8823a0d29ac3b2aaf0d47",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=FR&sinceTimePeriod=2023-01&untilTimePeriod=2023-12",
+      "sha256": "29fd6287cea3d5ea8dd9e2438346d6ee890c185e1efd940658a9bb45fcb38047",
+      "path": "data/raw/eurostat/4aa0ff5ef64902ebcd157db91babc38d20c41d39ddb8823a0d29ac3b2aaf0d47/29fd6287cea3d5ea8dd9e2438346d6ee890c185e1efd940658a9bb45fcb38047.json",
+      "bytes": 44162,
+      "retrieved_at": "2026-09-28T09:04:59.287492+00:00"
+    },
+    {
+      "source_id": "c112fdb7872d1a41-b5c1dfccfea5959b",
+      "provider": "eurostat",
+      "request_id": "c112fdb7872d1a41f84ee66f0827c56ffce916fe5bb178d91c2a51a4d017ed1a",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=FR&sinceTimePeriod=2024-01&untilTimePeriod=2024-12",
+      "sha256": "b5c1dfccfea5959bb0db603aa0a13d8f00506165f88c2e63c254d2e654223878",
+      "path": "data/raw/eurostat/c112fdb7872d1a41f84ee66f0827c56ffce916fe5bb178d91c2a51a4d017ed1a/b5c1dfccfea5959bb0db603aa0a13d8f00506165f88c2e63c254d2e654223878.json",
+      "bytes": 44743,
+      "retrieved_at": "2026-09-28T09:05:00.721629+00:00"
+    },
+    {
+      "source_id": "342d7b820f407018-38b225a1633c126c",
+      "provider": "eurostat",
+      "request_id": "342d7b820f407018789600242f7c167390ade654cbc648d24eb4db56831a9251",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=FR&sinceTimePeriod=2025-01&untilTimePeriod=2025-12",
+      "sha256": "38b225a1633c126c14eeb286b619c20a253ff8193db875b841a9c1ac45568c14",
+      "path": "data/raw/eurostat/342d7b820f407018789600242f7c167390ade654cbc648d24eb4db56831a9251/38b225a1633c126c14eeb286b619c20a253ff8193db875b841a9c1ac45568c14.json",
+      "bytes": 45049,
+      "retrieved_at": "2026-09-28T09:05:02.285454+00:00"
+    },
+    {
+      "source_id": "ed3ce05affcb38db-6c5f6ee21a392af2",
+      "provider": "eurostat",
+      "request_id": "ed3ce05affcb38dba333c97605cd8a3607b46cdd096a97561d1939c435b10992",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=FR&sinceTimePeriod=2018-01&untilTimePeriod=2018-12",
+      "sha256": "6c5f6ee21a392af28a176c58df883c9f836dff644a610d55ea6de5802f6c61bb",
+      "path": "data/raw/eurostat/ed3ce05affcb38dba333c97605cd8a3607b46cdd096a97561d1939c435b10992/6c5f6ee21a392af28a176c58df883c9f836dff644a610d55ea6de5802f6c61bb.json",
+      "bytes": 39493,
+      "retrieved_at": "2026-09-28T09:05:03.578829+00:00"
+    },
+    {
+      "source_id": "793711586b2109f4-d362bc3fff6e394f",
+      "provider": "eurostat",
+      "request_id": "793711586b2109f4121f75541935780d5fa2c65dce3aca48bf6311130ad8b7ff",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=FR&sinceTimePeriod=2019-01&untilTimePeriod=2019-12",
+      "sha256": "d362bc3fff6e394f5ba190d2c2755f427536c5880c41e57ea4c8c20667164191",
+      "path": "data/raw/eurostat/793711586b2109f4121f75541935780d5fa2c65dce3aca48bf6311130ad8b7ff/d362bc3fff6e394f5ba190d2c2755f427536c5880c41e57ea4c8c20667164191.json",
+      "bytes": 40935,
+      "retrieved_at": "2026-09-28T09:05:05.021382+00:00"
+    },
+    {
+      "source_id": "86d675cc55d6a416-9a208a7d6f43ac4f",
+      "provider": "eurostat",
+      "request_id": "86d675cc55d6a416cc0e9bd6ebec90fb01f4e596e1325230743ed9ec3a17113a",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=FR&sinceTimePeriod=2020-01&untilTimePeriod=2020-12",
+      "sha256": "9a208a7d6f43ac4f515c00dde1002299835996234c521c36177d1b7ef5c71a62",
+      "path": "data/raw/eurostat/86d675cc55d6a416cc0e9bd6ebec90fb01f4e596e1325230743ed9ec3a17113a/9a208a7d6f43ac4f515c00dde1002299835996234c521c36177d1b7ef5c71a62.json",
+      "bytes": 39776,
+      "retrieved_at": "2026-09-28T09:05:06.325087+00:00"
+    },
+    {
+      "source_id": "343b1afffd1fb5e9-d88806c3424b38c0",
+      "provider": "eurostat",
+      "request_id": "343b1afffd1fb5e9cc93b1116a95087d8b227e7e87fa1aab3cc01b8938eff15c",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=FR&sinceTimePeriod=2021-01&untilTimePeriod=2021-12",
+      "sha256": "d88806c3424b38c00d26604b153b043a3880633afed5a0a217af8749d1e1d9a7",
+      "path": "data/raw/eurostat/343b1afffd1fb5e9cc93b1116a95087d8b227e7e87fa1aab3cc01b8938eff15c/d88806c3424b38c00d26604b153b043a3880633afed5a0a217af8749d1e1d9a7.json",
+      "bytes": 42009,
+      "retrieved_at": "2026-09-28T09:05:07.678835+00:00"
+    },
+    {
+      "source_id": "736f3de17e161d90-c7316104ec1a764e",
+      "provider": "eurostat",
+      "request_id": "736f3de17e161d90bc3c74643657b00fcea7de125a02026d684b79f8a8bbe3a2",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=FR&sinceTimePeriod=2022-01&untilTimePeriod=2022-12",
+      "sha256": "c7316104ec1a764e81de45d0cc29f51b11e93e27854e4e66d42d87e2650201b1",
+      "path": "data/raw/eurostat/736f3de17e161d90bc3c74643657b00fcea7de125a02026d684b79f8a8bbe3a2/c7316104ec1a764e81de45d0cc29f51b11e93e27854e4e66d42d87e2650201b1.json",
+      "bytes": 41939,
+      "retrieved_at": "2026-09-28T09:05:08.920129+00:00"
+    },
+    {
+      "source_id": "f7e874234b72f63c-538a0d8a463b4957",
+      "provider": "eurostat",
+      "request_id": "f7e874234b72f63c8e6448991dab1ada2e9a26f3e123958f3bcf075af9d5a257",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=FR&sinceTimePeriod=2023-01&untilTimePeriod=2023-12",
+      "sha256": "538a0d8a463b4957df8e6352b3a5233746b45c162eb1547e082627206fb069cc",
+      "path": "data/raw/eurostat/f7e874234b72f63c8e6448991dab1ada2e9a26f3e123958f3bcf075af9d5a257/538a0d8a463b4957df8e6352b3a5233746b45c162eb1547e082627206fb069cc.json",
+      "bytes": 42124,
+      "retrieved_at": "2026-09-28T09:05:10.279234+00:00"
+    },
+    {
+      "source_id": "a5d4eb2a0221a9a3-81c6bf8c753e26a5",
+      "provider": "eurostat",
+      "request_id": "a5d4eb2a0221a9a32d5a994076ad113a1d921eac1785b094531e5a1b36f31dde",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=FR&sinceTimePeriod=2024-01&untilTimePeriod=2024-12",
+      "sha256": "81c6bf8c753e26a5145bfdcfa39e0881e59fdaf30c2ecfc259d13bd282fd88fe",
+      "path": "data/raw/eurostat/a5d4eb2a0221a9a32d5a994076ad113a1d921eac1785b094531e5a1b36f31dde/81c6bf8c753e26a5145bfdcfa39e0881e59fdaf30c2ecfc259d13bd282fd88fe.json",
+      "bytes": 43154,
+      "retrieved_at": "2026-09-28T09:05:11.731578+00:00"
+    },
+    {
+      "source_id": "f57b5d5da07be558-ec564739f9b43e00",
+      "provider": "eurostat",
+      "request_id": "f57b5d5da07be55839604f6ef0a1575974382d3bef780a9acf0f0410a02926fc",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=FR&sinceTimePeriod=2025-01&untilTimePeriod=2025-12",
+      "sha256": "ec564739f9b43e00cfad08e575ecff8b08c5fd1557284f631bad12d7e4de8785",
+      "path": "data/raw/eurostat/f57b5d5da07be55839604f6ef0a1575974382d3bef780a9acf0f0410a02926fc/ec564739f9b43e00cfad08e575ecff8b08c5fd1557284f631bad12d7e4de8785.json",
+      "bytes": 44130,
+      "retrieved_at": "2026-09-28T09:05:13.112092+00:00"
+    },
+    {
+      "source_id": "48e615cdec3230b1-e504a6bc8361b419",
+      "provider": "eurostat",
+      "request_id": "48e615cdec3230b18ebd3404c28c4590ba78d0c42e5ba57aaa53e05c31d37368",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=NL&sinceTimePeriod=2018-01&untilTimePeriod=2018-12",
+      "sha256": "e504a6bc8361b419995fe1ed2560c724dc7e29ff02a0ec199c7b615d1a54eb82",
+      "path": "data/raw/eurostat/48e615cdec3230b18ebd3404c28c4590ba78d0c42e5ba57aaa53e05c31d37368/e504a6bc8361b419995fe1ed2560c724dc7e29ff02a0ec199c7b615d1a54eb82.json",
+      "bytes": 44064,
+      "retrieved_at": "2026-09-28T09:05:14.651638+00:00"
+    },
+    {
+      "source_id": "d27d64967d0952f0-678d29c69ba97f03",
+      "provider": "eurostat",
+      "request_id": "d27d64967d0952f04aa869fc4ec784b11a53b12875fb573014c82d0ee5df1b1d",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=NL&sinceTimePeriod=2019-01&untilTimePeriod=2019-12",
+      "sha256": "678d29c69ba97f03d1ebe2bdf430acf8999de34fb00042aa5e9f52e22946422f",
+      "path": "data/raw/eurostat/d27d64967d0952f04aa869fc4ec784b11a53b12875fb573014c82d0ee5df1b1d/678d29c69ba97f03d1ebe2bdf430acf8999de34fb00042aa5e9f52e22946422f.json",
+      "bytes": 45009,
+      "retrieved_at": "2026-09-28T09:05:16.178237+00:00"
+    },
+    {
+      "source_id": "b30a91a1e2ca4f41-6233a02d57824536",
+      "provider": "eurostat",
+      "request_id": "b30a91a1e2ca4f41c1fedfa24de8aed3d996521057069d505e3bad72526fa471",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=NL&sinceTimePeriod=2020-01&untilTimePeriod=2020-12",
+      "sha256": "6233a02d57824536380ab7081fdc06d6ac36875fd6ddcb84b0c907255aba5cae",
+      "path": "data/raw/eurostat/b30a91a1e2ca4f41c1fedfa24de8aed3d996521057069d505e3bad72526fa471/6233a02d57824536380ab7081fdc06d6ac36875fd6ddcb84b0c907255aba5cae.json",
+      "bytes": 46496,
+      "retrieved_at": "2026-09-28T09:05:17.675758+00:00"
+    },
+    {
+      "source_id": "798bf99f0f3bcd1f-a592d398c10c592c",
+      "provider": "eurostat",
+      "request_id": "798bf99f0f3bcd1f8577fb6feb7803493118de0771196f6ddd7007ae721213c3",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=NL&sinceTimePeriod=2021-01&untilTimePeriod=2021-12",
+      "sha256": "a592d398c10c592ce1b54b552982930e150ce4460298f2a4189601ee43365c00",
+      "path": "data/raw/eurostat/798bf99f0f3bcd1f8577fb6feb7803493118de0771196f6ddd7007ae721213c3/a592d398c10c592ce1b54b552982930e150ce4460298f2a4189601ee43365c00.json",
+      "bytes": 44386,
+      "retrieved_at": "2026-09-28T09:05:19.282023+00:00"
+    },
+    {
+      "source_id": "1ae81fd78af58692-8fec431e275523a2",
+      "provider": "eurostat",
+      "request_id": "1ae81fd78af58692723a26592d7167fe3389541ba2c9330605b5d98b30c8b921",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=NL&sinceTimePeriod=2022-01&untilTimePeriod=2022-12",
+      "sha256": "8fec431e275523a2240ac67e4a3d96fc8e436008c2d34bb6ca38cb1a32137ae4",
+      "path": "data/raw/eurostat/1ae81fd78af58692723a26592d7167fe3389541ba2c9330605b5d98b30c8b921/8fec431e275523a2240ac67e4a3d96fc8e436008c2d34bb6ca38cb1a32137ae4.json",
+      "bytes": 46163,
+      "retrieved_at": "2026-09-28T09:05:20.713602+00:00"
+    },
+    {
+      "source_id": "e14692099a9383c9-8a916cfc2d4def46",
+      "provider": "eurostat",
+      "request_id": "e14692099a9383c9a6c0833cd5f8f8a26a9779b14e2e0bea0fb71cd68f8b55bc",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=NL&sinceTimePeriod=2023-01&untilTimePeriod=2023-12",
+      "sha256": "8a916cfc2d4def46fc74c7d05fd50595d6e145bd9a02a0d970876987194ccbd2",
+      "path": "data/raw/eurostat/e14692099a9383c9a6c0833cd5f8f8a26a9779b14e2e0bea0fb71cd68f8b55bc/8a916cfc2d4def46fc74c7d05fd50595d6e145bd9a02a0d970876987194ccbd2.json",
+      "bytes": 44962,
+      "retrieved_at": "2026-09-28T09:05:22.115245+00:00"
+    },
+    {
+      "source_id": "6bc4bc2d986b62b7-bf16e941149dbc4e",
+      "provider": "eurostat",
+      "request_id": "6bc4bc2d986b62b703305c696578e7199392c5e781ce7a2daf48723cc838ca7b",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=NL&sinceTimePeriod=2024-01&untilTimePeriod=2024-12",
+      "sha256": "bf16e941149dbc4ef5c78cce2eba53031443f6bbe226a9eb4164c873f7a5ad89",
+      "path": "data/raw/eurostat/6bc4bc2d986b62b703305c696578e7199392c5e781ce7a2daf48723cc838ca7b/bf16e941149dbc4ef5c78cce2eba53031443f6bbe226a9eb4164c873f7a5ad89.json",
+      "bytes": 44895,
+      "retrieved_at": "2026-09-28T09:05:23.447590+00:00"
+    },
+    {
+      "source_id": "4e81d6ddb345cbd1-47fa6457cbd707cf",
+      "provider": "eurostat",
+      "request_id": "4e81d6ddb345cbd109fafc27d9756ec086da4439fb54831438ebf4f454f77ae4",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=NL&sinceTimePeriod=2025-01&untilTimePeriod=2025-12",
+      "sha256": "47fa6457cbd707cf44a80e6492b1fd536b02e09a8ac6d12033ad2dbb857fb676",
+      "path": "data/raw/eurostat/4e81d6ddb345cbd109fafc27d9756ec086da4439fb54831438ebf4f454f77ae4/47fa6457cbd707cf44a80e6492b1fd536b02e09a8ac6d12033ad2dbb857fb676.json",
+      "bytes": 45819,
+      "retrieved_at": "2026-09-28T09:05:24.814969+00:00"
+    },
+    {
+      "source_id": "04c780f1b1794aac-d1082dc583129f26",
+      "provider": "eurostat",
+      "request_id": "04c780f1b1794aac87b3a713e3edf81b6001e23acad99365aa8451efecb16e7b",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=NL&sinceTimePeriod=2018-01&untilTimePeriod=2018-12",
+      "sha256": "d1082dc583129f26f25b04703f665fe1c7473b21ab04598bb5b403f7e9cbe12a",
+      "path": "data/raw/eurostat/04c780f1b1794aac87b3a713e3edf81b6001e23acad99365aa8451efecb16e7b/d1082dc583129f26f25b04703f665fe1c7473b21ab04598bb5b403f7e9cbe12a.json",
+      "bytes": 47886,
+      "retrieved_at": "2026-09-28T09:05:25.990690+00:00"
+    },
+    {
+      "source_id": "f804fd95714552c8-58667f92b7fc523a",
+      "provider": "eurostat",
+      "request_id": "f804fd95714552c82c21185a5b10656a76e3e92a98b324dbd3e8c35fe80baead",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=NL&sinceTimePeriod=2019-01&untilTimePeriod=2019-12",
+      "sha256": "58667f92b7fc523a5e5ca58f0ad52536d7b360e1104a8de9a2f7858bff65e30e",
+      "path": "data/raw/eurostat/f804fd95714552c82c21185a5b10656a76e3e92a98b324dbd3e8c35fe80baead/58667f92b7fc523a5e5ca58f0ad52536d7b360e1104a8de9a2f7858bff65e30e.json",
+      "bytes": 49638,
+      "retrieved_at": "2026-09-28T09:05:27.361936+00:00"
+    },
+    {
+      "source_id": "e18e3ffb36cbf229-c7566237bd289470",
+      "provider": "eurostat",
+      "request_id": "e18e3ffb36cbf22982617af19ae59d21c1647cfd49b0067fb882913e1144ab11",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=NL&sinceTimePeriod=2020-01&untilTimePeriod=2020-12",
+      "sha256": "c7566237bd2894702125ba41d60fe4b0cac4ce00d91d1edaa83eafe5871edda5",
+      "path": "data/raw/eurostat/e18e3ffb36cbf22982617af19ae59d21c1647cfd49b0067fb882913e1144ab11/c7566237bd2894702125ba41d60fe4b0cac4ce00d91d1edaa83eafe5871edda5.json",
+      "bytes": 50396,
+      "retrieved_at": "2026-09-28T09:05:28.894623+00:00"
+    },
+    {
+      "source_id": "5cefdaccc6096236-59eff4c4e58d1727",
+      "provider": "eurostat",
+      "request_id": "5cefdaccc609623686dcfe6f1d63f59dfe3d67c5648e025f756ef0a4cb480c48",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=NL&sinceTimePeriod=2021-01&untilTimePeriod=2021-12",
+      "sha256": "59eff4c4e58d172750e45869be8ac6ea2079c84fdb9f5bb5359e5e50ad935261",
+      "path": "data/raw/eurostat/5cefdaccc609623686dcfe6f1d63f59dfe3d67c5648e025f756ef0a4cb480c48/59eff4c4e58d172750e45869be8ac6ea2079c84fdb9f5bb5359e5e50ad935261.json",
+      "bytes": 50772,
+      "retrieved_at": "2026-09-28T09:05:30.265169+00:00"
+    },
+    {
+      "source_id": "33e658c16e660ee1-3018ab1643f5e415",
+      "provider": "eurostat",
+      "request_id": "33e658c16e660ee15fcb3259567a0e56f2bbd55a4ebfeef4bc355f9fb789da5e",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=NL&sinceTimePeriod=2022-01&untilTimePeriod=2022-12",
+      "sha256": "3018ab1643f5e415b6f103efd3ccac21d475e59d41b033347c8c3451ebd86df0",
+      "path": "data/raw/eurostat/33e658c16e660ee15fcb3259567a0e56f2bbd55a4ebfeef4bc355f9fb789da5e/3018ab1643f5e415b6f103efd3ccac21d475e59d41b033347c8c3451ebd86df0.json",
+      "bytes": 52775,
+      "retrieved_at": "2026-09-28T09:05:31.729034+00:00"
+    },
+    {
+      "source_id": "2b36f39c78d22b80-7757092e3c0d263e",
+      "provider": "eurostat",
+      "request_id": "2b36f39c78d22b80c669846d39f6429927599706078fd9fba8fecfc3e74c6c92",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=NL&sinceTimePeriod=2023-01&untilTimePeriod=2023-12",
+      "sha256": "7757092e3c0d263e7c6eb2e2b91a9f03c632047df89eb7619dca9b82505015da",
+      "path": "data/raw/eurostat/2b36f39c78d22b80c669846d39f6429927599706078fd9fba8fecfc3e74c6c92/7757092e3c0d263e7c6eb2e2b91a9f03c632047df89eb7619dca9b82505015da.json",
+      "bytes": 51203,
+      "retrieved_at": "2026-09-28T09:05:33.295479+00:00"
+    },
+    {
+      "source_id": "1e7fc12f31babe4d-458616497e804fa2",
+      "provider": "eurostat",
+      "request_id": "1e7fc12f31babe4d46765a98ed9c5f5c8a0c0144f5ad88603bf5e7b215613015",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=NL&sinceTimePeriod=2024-01&untilTimePeriod=2024-12",
+      "sha256": "458616497e804fa2dc3f35c5bb50418032043007f1a2c1a0516f199cf53d2119",
+      "path": "data/raw/eurostat/1e7fc12f31babe4d46765a98ed9c5f5c8a0c0144f5ad88603bf5e7b215613015/458616497e804fa2dc3f35c5bb50418032043007f1a2c1a0516f199cf53d2119.json",
+      "bytes": 50085,
+      "retrieved_at": "2026-09-28T09:05:34.996741+00:00"
+    },
+    {
+      "source_id": "53c9b2728318cabb-f4ae96f11eb47c1e",
+      "provider": "eurostat",
+      "request_id": "53c9b2728318cabbbea1bf6ae583d1745e7a9ed99de6e3e6983473a64e9e286a",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=NL&sinceTimePeriod=2025-01&untilTimePeriod=2025-12",
+      "sha256": "f4ae96f11eb47c1e025bb23c3543d28b267b9f7ab55daf09819ac820107c5ada",
+      "path": "data/raw/eurostat/53c9b2728318cabbbea1bf6ae583d1745e7a9ed99de6e3e6983473a64e9e286a/f4ae96f11eb47c1e025bb23c3543d28b267b9f7ab55daf09819ac820107c5ada.json",
+      "bytes": 50478,
+      "retrieved_at": "2026-09-28T09:05:36.430597+00:00"
+    },
+    {
+      "source_id": "df2ee242de8d6aee-e5ea4663ad1a5d8c",
+      "provider": "eurostat",
+      "request_id": "df2ee242de8d6aeee40add04bcf7a1169353105c7014cd0a158d26e729f0abc8",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=NL&sinceTimePeriod=2018-01&untilTimePeriod=2018-12",
+      "sha256": "e5ea4663ad1a5d8c1a0884462095ab9056037182dcdb033133d13234bf4ad91b",
+      "path": "data/raw/eurostat/df2ee242de8d6aeee40add04bcf7a1169353105c7014cd0a158d26e729f0abc8/e5ea4663ad1a5d8c1a0884462095ab9056037182dcdb033133d13234bf4ad91b.json",
+      "bytes": 50975,
+      "retrieved_at": "2026-09-28T09:05:37.639008+00:00"
+    },
+    {
+      "source_id": "1bc578e4d941c4a5-d7bac617af8b6a11",
+      "provider": "eurostat",
+      "request_id": "1bc578e4d941c4a53c2169c18151d0f46492e22f9832703944ccfe5dda60536c",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=NL&sinceTimePeriod=2019-01&untilTimePeriod=2019-12",
+      "sha256": "d7bac617af8b6a117852d981eb52c7dc2d8ce36e2b4fc3400deabb8a69fbc572",
+      "path": "data/raw/eurostat/1bc578e4d941c4a53c2169c18151d0f46492e22f9832703944ccfe5dda60536c/d7bac617af8b6a117852d981eb52c7dc2d8ce36e2b4fc3400deabb8a69fbc572.json",
+      "bytes": 52075,
+      "retrieved_at": "2026-09-28T09:05:38.989097+00:00"
+    },
+    {
+      "source_id": "7dd7c69b50596836-7528f4bff82c6e61",
+      "provider": "eurostat",
+      "request_id": "7dd7c69b50596836527428a997ecb800bb75fe10589886d2140374b908e76b28",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=NL&sinceTimePeriod=2020-01&untilTimePeriod=2020-12",
+      "sha256": "7528f4bff82c6e61d174d4ad1133ea31df21d267f29f9df59da4f43fd8e3b250",
+      "path": "data/raw/eurostat/7dd7c69b50596836527428a997ecb800bb75fe10589886d2140374b908e76b28/7528f4bff82c6e61d174d4ad1133ea31df21d267f29f9df59da4f43fd8e3b250.json",
+      "bytes": 51474,
+      "retrieved_at": "2026-09-28T09:05:40.214456+00:00"
+    },
+    {
+      "source_id": "57c4f44c6fec2fb6-d056b8c3d8b5f824",
+      "provider": "eurostat",
+      "request_id": "57c4f44c6fec2fb6ba43bb248b5627c7a1331d2bfa584c81ed622077403838b2",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=NL&sinceTimePeriod=2021-01&untilTimePeriod=2021-12",
+      "sha256": "d056b8c3d8b5f824499f047fd9552ef9d2f5e7c2b907984a319e23b711b492ee",
+      "path": "data/raw/eurostat/57c4f44c6fec2fb6ba43bb248b5627c7a1331d2bfa584c81ed622077403838b2/d056b8c3d8b5f824499f047fd9552ef9d2f5e7c2b907984a319e23b711b492ee.json",
+      "bytes": 52690,
+      "retrieved_at": "2026-09-28T09:05:41.759104+00:00"
+    },
+    {
+      "source_id": "c4f8f5ae7c1bf41e-bf44788fa500bc72",
+      "provider": "eurostat",
+      "request_id": "c4f8f5ae7c1bf41e122ad447fedaf923439e81eb2b069221b1894ab8bdc84f07",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=NL&sinceTimePeriod=2022-01&untilTimePeriod=2022-12",
+      "sha256": "bf44788fa500bc7295f3ea468ac9485b2025769998960eb129c579a5efef48e3",
+      "path": "data/raw/eurostat/c4f8f5ae7c1bf41e122ad447fedaf923439e81eb2b069221b1894ab8bdc84f07/bf44788fa500bc7295f3ea468ac9485b2025769998960eb129c579a5efef48e3.json",
+      "bytes": 53628,
+      "retrieved_at": "2026-09-28T09:05:43.227643+00:00"
+    },
+    {
+      "source_id": "af0808e0733be188-1aa24d2ae2039c8d",
+      "provider": "eurostat",
+      "request_id": "af0808e0733be1886666b2db70f30dc582059fa8a07dc5542051ab3cf3062c9b",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=NL&sinceTimePeriod=2023-01&untilTimePeriod=2023-12",
+      "sha256": "1aa24d2ae2039c8d71669d4136bc00607ea281e8ea49511a9e4e240cbc29a5b1",
+      "path": "data/raw/eurostat/af0808e0733be1886666b2db70f30dc582059fa8a07dc5542051ab3cf3062c9b/1aa24d2ae2039c8d71669d4136bc00607ea281e8ea49511a9e4e240cbc29a5b1.json",
+      "bytes": 52736,
+      "retrieved_at": "2026-09-28T09:05:44.821734+00:00"
+    },
+    {
+      "source_id": "101b6e5f3901360d-2f5f91d0504065dc",
+      "provider": "eurostat",
+      "request_id": "101b6e5f3901360dc05d64a6f814f8bb0261b435510e538e22936854f354afc6",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=NL&sinceTimePeriod=2024-01&untilTimePeriod=2024-12",
+      "sha256": "2f5f91d0504065dc8d6cd6e8f15935e00b403267c55ea691372db72132970bf1",
+      "path": "data/raw/eurostat/101b6e5f3901360dc05d64a6f814f8bb0261b435510e538e22936854f354afc6/2f5f91d0504065dc8d6cd6e8f15935e00b403267c55ea691372db72132970bf1.json",
+      "bytes": 51510,
+      "retrieved_at": "2026-09-28T09:05:46.310955+00:00"
+    },
+    {
+      "source_id": "6655c709cfb58cf6-bbdf400907a758bb",
+      "provider": "eurostat",
+      "request_id": "6655c709cfb58cf66166be0ec3b5855fd76b365592a435f5f5fadd067cce9bf2",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=NL&sinceTimePeriod=2025-01&untilTimePeriod=2025-12",
+      "sha256": "bbdf400907a758bbdd0d214e522205affce0ee9bf04d2c55051da10cd1aca13e",
+      "path": "data/raw/eurostat/6655c709cfb58cf66166be0ec3b5855fd76b365592a435f5f5fadd067cce9bf2/bbdf400907a758bbdd0d214e522205affce0ee9bf04d2c55051da10cd1aca13e.json",
+      "bytes": 52226,
+      "retrieved_at": "2026-09-28T09:05:47.644929+00:00"
+    },
+    {
+      "source_id": "677513262c49e319-3984cbb71fa68b50",
+      "provider": "eurostat",
+      "request_id": "677513262c49e31966d9fb909e02986e6ccf5afa1a62a0f742db7c84fb297dd0",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=IT&sinceTimePeriod=2018-01&untilTimePeriod=2018-12",
+      "sha256": "3984cbb71fa68b5020c6efb9ba71383a79b01b1fd7f5d51d3fcc3d78fc102163",
+      "path": "data/raw/eurostat/677513262c49e31966d9fb909e02986e6ccf5afa1a62a0f742db7c84fb297dd0/3984cbb71fa68b5020c6efb9ba71383a79b01b1fd7f5d51d3fcc3d78fc102163.json",
+      "bytes": 41496,
+      "retrieved_at": "2026-09-28T09:05:49.372792+00:00"
+    },
+    {
+      "source_id": "64ffef09976ebd5e-101d9bccb4230468",
+      "provider": "eurostat",
+      "request_id": "64ffef09976ebd5e745811f3a4028fb379640e31af88d3438c951f04dae0ef56",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=IT&sinceTimePeriod=2019-01&untilTimePeriod=2019-12",
+      "sha256": "101d9bccb4230468463d1f3009bb11c825f8eb2c5f289728a1f4d6bd0d49403b",
+      "path": "data/raw/eurostat/64ffef09976ebd5e745811f3a4028fb379640e31af88d3438c951f04dae0ef56/101d9bccb4230468463d1f3009bb11c825f8eb2c5f289728a1f4d6bd0d49403b.json",
+      "bytes": 43082,
+      "retrieved_at": "2026-09-28T09:05:50.919520+00:00"
+    },
+    {
+      "source_id": "4659950aaaea9c21-aafcbe5ae395606d",
+      "provider": "eurostat",
+      "request_id": "4659950aaaea9c21593198c0991cc89e5797652cf6d842845b82364c382497cc",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=IT&sinceTimePeriod=2020-01&untilTimePeriod=2020-12",
+      "sha256": "aafcbe5ae395606d7af819f8cf8872c3a466318a6bb5619ea28f499eb63b2b91",
+      "path": "data/raw/eurostat/4659950aaaea9c21593198c0991cc89e5797652cf6d842845b82364c382497cc/aafcbe5ae395606d7af819f8cf8872c3a466318a6bb5619ea28f499eb63b2b91.json",
+      "bytes": 39877,
+      "retrieved_at": "2026-09-28T09:05:52.365097+00:00"
+    },
+    {
+      "source_id": "767eedb8f42774e4-d6a548f555c029d6",
+      "provider": "eurostat",
+      "request_id": "767eedb8f42774e45e28802417a0516c58dc475f906189d87ce20dc30129d607",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=IT&sinceTimePeriod=2021-01&untilTimePeriod=2021-12",
+      "sha256": "d6a548f555c029d6ed71daa75f27157e120cedcb36083e57dcc6a51105613b5b",
+      "path": "data/raw/eurostat/767eedb8f42774e45e28802417a0516c58dc475f906189d87ce20dc30129d607/d6a548f555c029d6ed71daa75f27157e120cedcb36083e57dcc6a51105613b5b.json",
+      "bytes": 45530,
+      "retrieved_at": "2026-09-28T09:05:53.902898+00:00"
+    },
+    {
+      "source_id": "e9228e2e70070e60-974799b536bdf039",
+      "provider": "eurostat",
+      "request_id": "e9228e2e70070e60f4b3134fecd351ba5626dff819e55bff0d336eecdbbaa413",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=IT&sinceTimePeriod=2022-01&untilTimePeriod=2022-12",
+      "sha256": "974799b536bdf039f7318387c8e233c4542d0fe74a3e79179c9dec8764c37456",
+      "path": "data/raw/eurostat/e9228e2e70070e60f4b3134fecd351ba5626dff819e55bff0d336eecdbbaa413/974799b536bdf039f7318387c8e233c4542d0fe74a3e79179c9dec8764c37456.json",
+      "bytes": 42380,
+      "retrieved_at": "2026-09-28T09:05:55.283261+00:00"
+    },
+    {
+      "source_id": "7222154bcfb48b14-570c8d821840d931",
+      "provider": "eurostat",
+      "request_id": "7222154bcfb48b14cabdf72998fce9023b46de777f184e3dcce93e6ccbee0ca8",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=IT&sinceTimePeriod=2023-01&untilTimePeriod=2023-12",
+      "sha256": "570c8d821840d931b9b1a06e8b367394770b2214fff58e837088c03bb98e18d1",
+      "path": "data/raw/eurostat/7222154bcfb48b14cabdf72998fce9023b46de777f184e3dcce93e6ccbee0ca8/570c8d821840d931b9b1a06e8b367394770b2214fff58e837088c03bb98e18d1.json",
+      "bytes": 44052,
+      "retrieved_at": "2026-09-28T09:05:56.866936+00:00"
+    },
+    {
+      "source_id": "06650cefba3edf4a-1f18c466af395f79",
+      "provider": "eurostat",
+      "request_id": "06650cefba3edf4a76f23658462452edf6e0857d9515a02530d5c1aa3051be1c",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=IT&sinceTimePeriod=2024-01&untilTimePeriod=2024-12",
+      "sha256": "1f18c466af395f7951092ad48a0c0d6cde2fcf2ec9aebd479c77fba7d6e56e83",
+      "path": "data/raw/eurostat/06650cefba3edf4a76f23658462452edf6e0857d9515a02530d5c1aa3051be1c/1f18c466af395f7951092ad48a0c0d6cde2fcf2ec9aebd479c77fba7d6e56e83.json",
+      "bytes": 44074,
+      "retrieved_at": "2026-09-28T09:05:58.414962+00:00"
+    },
+    {
+      "source_id": "fd40a6ca2a46c7a5-27988e5ff732a09c",
+      "provider": "eurostat",
+      "request_id": "fd40a6ca2a46c7a57a6fa168eb2ced1821f6950cfdfaa07389d41d8eaf01e56e",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=IT&sinceTimePeriod=2025-01&untilTimePeriod=2025-12",
+      "sha256": "27988e5ff732a09c58dc26de1ef7b85e1c4887f53d4e477becb7158df5181752",
+      "path": "data/raw/eurostat/fd40a6ca2a46c7a57a6fa168eb2ced1821f6950cfdfaa07389d41d8eaf01e56e/27988e5ff732a09c58dc26de1ef7b85e1c4887f53d4e477becb7158df5181752.json",
+      "bytes": 43860,
+      "retrieved_at": "2026-09-28T09:06:00.175429+00:00"
+    },
+    {
+      "source_id": "6e7e6ec5c6497cf2-c5bd7cefe6ce014f",
+      "provider": "eurostat",
+      "request_id": "6e7e6ec5c6497cf2eefcb9953c2c65e7337f9b6c03bd3d4e532792a958e10abb",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=IT&sinceTimePeriod=2018-01&untilTimePeriod=2018-12",
+      "sha256": "c5bd7cefe6ce014f42f92ab2158ecc358171759080cac147fd3cd63b8f909e19",
+      "path": "data/raw/eurostat/6e7e6ec5c6497cf2eefcb9953c2c65e7337f9b6c03bd3d4e532792a958e10abb/c5bd7cefe6ce014f42f92ab2158ecc358171759080cac147fd3cd63b8f909e19.json",
+      "bytes": 45049,
+      "retrieved_at": "2026-09-28T09:06:01.689567+00:00"
+    },
+    {
+      "source_id": "0820156a8cac0adc-994f86b768e6dd37",
+      "provider": "eurostat",
+      "request_id": "0820156a8cac0adc4a1fd51dbaf52c14111c16dc48a798ddfc2ec9b0ebf7c797",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=IT&sinceTimePeriod=2019-01&untilTimePeriod=2019-12",
+      "sha256": "994f86b768e6dd37790b9cfea0efa859e1124ff2a0859422cc6e220be40c9797",
+      "path": "data/raw/eurostat/0820156a8cac0adc4a1fd51dbaf52c14111c16dc48a798ddfc2ec9b0ebf7c797/994f86b768e6dd37790b9cfea0efa859e1124ff2a0859422cc6e220be40c9797.json",
+      "bytes": 50022,
+      "retrieved_at": "2026-09-28T09:06:03.185226+00:00"
+    },
+    {
+      "source_id": "1c465a6634cf62e8-ad52b422888d2328",
+      "provider": "eurostat",
+      "request_id": "1c465a6634cf62e866304ff1ca5cd70b274ba1499dba316f6eacd441d1b3fe2d",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=IT&sinceTimePeriod=2020-01&untilTimePeriod=2020-12",
+      "sha256": "ad52b422888d2328b2f04a8c2ee729aa75097242d836982d00baa3fa83e7657b",
+      "path": "data/raw/eurostat/1c465a6634cf62e866304ff1ca5cd70b274ba1499dba316f6eacd441d1b3fe2d/ad52b422888d2328b2f04a8c2ee729aa75097242d836982d00baa3fa83e7657b.json",
+      "bytes": 43190,
+      "retrieved_at": "2026-09-28T09:06:04.482339+00:00"
+    },
+    {
+      "source_id": "2f193f53db4179a6-67892d489e70539f",
+      "provider": "eurostat",
+      "request_id": "2f193f53db4179a637f86f77f22b2ba204ce4a931715d5499c41d387e355a9ef",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=IT&sinceTimePeriod=2021-01&untilTimePeriod=2021-12",
+      "sha256": "67892d489e70539fd63c8fc0af26c3745e99cc74f6fd81e0fb8896d6d001c90c",
+      "path": "data/raw/eurostat/2f193f53db4179a637f86f77f22b2ba204ce4a931715d5499c41d387e355a9ef/67892d489e70539fd63c8fc0af26c3745e99cc74f6fd81e0fb8896d6d001c90c.json",
+      "bytes": 53524,
+      "retrieved_at": "2026-09-28T09:06:05.875682+00:00"
+    },
+    {
+      "source_id": "781ceba4049aa33e-5485905a4762ce6e",
+      "provider": "eurostat",
+      "request_id": "781ceba4049aa33e3183c76bd9d127977fd76f77dd3911c57706d9a262656bc0",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=IT&sinceTimePeriod=2022-01&untilTimePeriod=2022-12",
+      "sha256": "5485905a4762ce6e93a9ee1f57f1d7156a733ec90cd8c81e1c07bb6dcc05ac01",
+      "path": "data/raw/eurostat/781ceba4049aa33e3183c76bd9d127977fd76f77dd3911c57706d9a262656bc0/5485905a4762ce6e93a9ee1f57f1d7156a733ec90cd8c81e1c07bb6dcc05ac01.json",
+      "bytes": 48196,
+      "retrieved_at": "2026-09-28T09:06:07.303594+00:00"
+    },
+    {
+      "source_id": "3d82c864d170e739-674e24607629b4ff",
+      "provider": "eurostat",
+      "request_id": "3d82c864d170e7397f941d77ac5f9b087e31b53aa6e9ec32b689bcfcaac15744",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=IT&sinceTimePeriod=2023-01&untilTimePeriod=2023-12",
+      "sha256": "674e24607629b4ff51f28b30c788002f01b14759f5834a99cfb7dbb27e3b9b28",
+      "path": "data/raw/eurostat/3d82c864d170e7397f941d77ac5f9b087e31b53aa6e9ec32b689bcfcaac15744/674e24607629b4ff51f28b30c788002f01b14759f5834a99cfb7dbb27e3b9b28.json",
+      "bytes": 46707,
+      "retrieved_at": "2026-09-28T09:06:08.625135+00:00"
+    },
+    {
+      "source_id": "c6a541f58fce5cc3-965ea16ff905cd82",
+      "provider": "eurostat",
+      "request_id": "c6a541f58fce5cc375e776f16b1570e562328318fd1f0b0c529e66d77d88101c",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=IT&sinceTimePeriod=2024-01&untilTimePeriod=2024-12",
+      "sha256": "965ea16ff905cd822d11fdfd93f7304edeb22cc6ed00ac32ec44cfb5938b7c3a",
+      "path": "data/raw/eurostat/c6a541f58fce5cc375e776f16b1570e562328318fd1f0b0c529e66d77d88101c/965ea16ff905cd822d11fdfd93f7304edeb22cc6ed00ac32ec44cfb5938b7c3a.json",
+      "bytes": 47586,
+      "retrieved_at": "2026-09-28T09:06:09.817444+00:00"
+    },
+    {
+      "source_id": "2d750d2214fc9802-9247c56fcc2a233c",
+      "provider": "eurostat",
+      "request_id": "2d750d2214fc9802ce67961ce34d67bca62adcaad73c1aff2b736aa490c02af5",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=IT&sinceTimePeriod=2025-01&untilTimePeriod=2025-12",
+      "sha256": "9247c56fcc2a233c9a43a08658f232c3b8199fd438737f6f1f33103cb01adf9b",
+      "path": "data/raw/eurostat/2d750d2214fc9802ce67961ce34d67bca62adcaad73c1aff2b736aa490c02af5/9247c56fcc2a233c9a43a08658f232c3b8199fd438737f6f1f33103cb01adf9b.json",
+      "bytes": 47163,
+      "retrieved_at": "2026-09-28T09:06:11.196392+00:00"
+    },
+    {
+      "source_id": "cd2bbc4079b8c48d-8b6fa5a717400454",
+      "provider": "eurostat",
+      "request_id": "cd2bbc4079b8c48d5f49f689412f2e62647f57a4163eb3dc2e1f1418677e6965",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=IT&sinceTimePeriod=2018-01&untilTimePeriod=2018-12",
+      "sha256": "8b6fa5a71740045472f1c6fb2f271eb55653103563fa26546ba14ad400dd2d45",
+      "path": "data/raw/eurostat/cd2bbc4079b8c48d5f49f689412f2e62647f57a4163eb3dc2e1f1418677e6965/8b6fa5a71740045472f1c6fb2f271eb55653103563fa26546ba14ad400dd2d45.json",
+      "bytes": 51920,
+      "retrieved_at": "2026-09-28T09:06:12.504799+00:00"
+    },
+    {
+      "source_id": "3317898f289ef0da-813bfd04410b2a17",
+      "provider": "eurostat",
+      "request_id": "3317898f289ef0da4e6099f5a6cc9229196a22636472911efba27e75036a006f",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=IT&sinceTimePeriod=2019-01&untilTimePeriod=2019-12",
+      "sha256": "813bfd04410b2a175b215a1537f44f7869b707b3d57ba90b96a17e3f7903d895",
+      "path": "data/raw/eurostat/3317898f289ef0da4e6099f5a6cc9229196a22636472911efba27e75036a006f/813bfd04410b2a175b215a1537f44f7869b707b3d57ba90b96a17e3f7903d895.json",
+      "bytes": 57744,
+      "retrieved_at": "2026-09-28T09:06:13.746660+00:00"
+    },
+    {
+      "source_id": "f07b85a1d061de10-2cc6c86d7a70d192",
+      "provider": "eurostat",
+      "request_id": "f07b85a1d061de1016d86f71c41a559501504c5ad7705a971c85dd8bce6b419e",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=IT&sinceTimePeriod=2020-01&untilTimePeriod=2020-12",
+      "sha256": "2cc6c86d7a70d1921e1d358b5b2b636bb968d16f507dd77097c56fba1dcac00e",
+      "path": "data/raw/eurostat/f07b85a1d061de1016d86f71c41a559501504c5ad7705a971c85dd8bce6b419e/2cc6c86d7a70d1921e1d358b5b2b636bb968d16f507dd77097c56fba1dcac00e.json",
+      "bytes": 52367,
+      "retrieved_at": "2026-09-28T09:06:14.944054+00:00"
+    },
+    {
+      "source_id": "d55de06446225062-9da7dc24c9b640bc",
+      "provider": "eurostat",
+      "request_id": "d55de064462250628ef3ef64dafeaefc7e2408cd787254f6cb859e8370f22b93",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=IT&sinceTimePeriod=2021-01&untilTimePeriod=2021-12",
+      "sha256": "9da7dc24c9b640bcc247d3b5650c39b43c9050bd1ed0f967ca510eeda69b0574",
+      "path": "data/raw/eurostat/d55de064462250628ef3ef64dafeaefc7e2408cd787254f6cb859e8370f22b93/9da7dc24c9b640bcc247d3b5650c39b43c9050bd1ed0f967ca510eeda69b0574.json",
+      "bytes": 63131,
+      "retrieved_at": "2026-09-28T09:06:16.351358+00:00"
+    },
+    {
+      "source_id": "1e4eb2811925319d-18827b724cdaca0f",
+      "provider": "eurostat",
+      "request_id": "1e4eb2811925319da049c9f6942e1e152ddf49dc5288d31633dc37594157c1fa",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=IT&sinceTimePeriod=2022-01&untilTimePeriod=2022-12",
+      "sha256": "18827b724cdaca0f1da7c3a58b4874725a21aa6cd4813ffbb1b3694b1fead7c9",
+      "path": "data/raw/eurostat/1e4eb2811925319da049c9f6942e1e152ddf49dc5288d31633dc37594157c1fa/18827b724cdaca0f1da7c3a58b4874725a21aa6cd4813ffbb1b3694b1fead7c9.json",
+      "bytes": 55292,
+      "retrieved_at": "2026-09-28T09:06:17.713796+00:00"
+    },
+    {
+      "source_id": "ee62e537ec3ad322-cc5ea3850f487908",
+      "provider": "eurostat",
+      "request_id": "ee62e537ec3ad322d78c4d82515db811a7b4e692c88ee100f46f142da64251ce",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=IT&sinceTimePeriod=2023-01&untilTimePeriod=2023-12",
+      "sha256": "cc5ea3850f4879083d34a9872ce12783a7498ee78c1785382a063f7f7991899b",
+      "path": "data/raw/eurostat/ee62e537ec3ad322d78c4d82515db811a7b4e692c88ee100f46f142da64251ce/cc5ea3850f4879083d34a9872ce12783a7498ee78c1785382a063f7f7991899b.json",
+      "bytes": 54674,
+      "retrieved_at": "2026-09-28T09:06:18.857241+00:00"
+    },
+    {
+      "source_id": "aa112c4a8296a588-1defbdb6821883ff",
+      "provider": "eurostat",
+      "request_id": "aa112c4a8296a588f9de98795f469d1e7368483650bc5a54bab9e765a19bd8d9",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=IT&sinceTimePeriod=2024-01&untilTimePeriod=2024-12",
+      "sha256": "1defbdb6821883ff26920da912d307bc15f75f109f7efd862f9b514c09ef5850",
+      "path": "data/raw/eurostat/aa112c4a8296a588f9de98795f469d1e7368483650bc5a54bab9e765a19bd8d9/1defbdb6821883ff26920da912d307bc15f75f109f7efd862f9b514c09ef5850.json",
+      "bytes": 54351,
+      "retrieved_at": "2026-09-28T09:06:20.282051+00:00"
+    },
+    {
+      "source_id": "6112e117ab85cc93-783712aeeb0c44d7",
+      "provider": "eurostat",
+      "request_id": "6112e117ab85cc9369433a9aefc8f68dd9e93a34e2c1cbfec3c22eefb4a73525",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=IT&sinceTimePeriod=2025-01&untilTimePeriod=2025-12",
+      "sha256": "783712aeeb0c44d744d2317375d9f84690f41edc60e5cd3e9ee83809f3c4dde0",
+      "path": "data/raw/eurostat/6112e117ab85cc9369433a9aefc8f68dd9e93a34e2c1cbfec3c22eefb4a73525/783712aeeb0c44d744d2317375d9f84690f41edc60e5cd3e9ee83809f3c4dde0.json",
+      "bytes": 54866,
+      "retrieved_at": "2026-09-28T09:06:21.603117+00:00"
+    },
+    {
+      "source_id": "abd95513e1d124d8-8d687bee669cbbc1",
+      "provider": "eurostat",
+      "request_id": "abd95513e1d124d81cc03ce5d9c56ce00b63890c306accff499736f86291a271",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=ES&sinceTimePeriod=2018-01&untilTimePeriod=2018-12",
+      "sha256": "8d687bee669cbbc1bdacc80f2ebcd0bccbe86f2299270a01bf98acfcfcc7e4c2",
+      "path": "data/raw/eurostat/abd95513e1d124d81cc03ce5d9c56ce00b63890c306accff499736f86291a271/8d687bee669cbbc1bdacc80f2ebcd0bccbe86f2299270a01bf98acfcfcc7e4c2.json",
+      "bytes": 32322,
+      "retrieved_at": "2026-09-28T09:06:22.892104+00:00"
+    },
+    {
+      "source_id": "b2945f6bff4b8ce0-92dc31fd72287a77",
+      "provider": "eurostat",
+      "request_id": "b2945f6bff4b8ce09f370c8f37fd37f168f743818025e7fca577ed7a1f28241a",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=ES&sinceTimePeriod=2019-01&untilTimePeriod=2019-12",
+      "sha256": "92dc31fd72287a77408013091c4d720447e9813a10ef9bd9ebdc8ec710603080",
+      "path": "data/raw/eurostat/b2945f6bff4b8ce09f370c8f37fd37f168f743818025e7fca577ed7a1f28241a/92dc31fd72287a77408013091c4d720447e9813a10ef9bd9ebdc8ec710603080.json",
+      "bytes": 31403,
+      "retrieved_at": "2026-09-28T09:06:24.322959+00:00"
+    },
+    {
+      "source_id": "007e8675113c8f80-ab32c969562a0e28",
+      "provider": "eurostat",
+      "request_id": "007e8675113c8f80c14e9c6c4dd2845fd5a4bef3af05fca0aabfe481fa975b5e",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=ES&sinceTimePeriod=2020-01&untilTimePeriod=2020-12",
+      "sha256": "ab32c969562a0e28d2063a6f6a80c52b93b626ecd4abaf453a97e134d6846fd5",
+      "path": "data/raw/eurostat/007e8675113c8f80c14e9c6c4dd2845fd5a4bef3af05fca0aabfe481fa975b5e/ab32c969562a0e28d2063a6f6a80c52b93b626ecd4abaf453a97e134d6846fd5.json",
+      "bytes": 30801,
+      "retrieved_at": "2026-09-28T09:06:25.718587+00:00"
+    },
+    {
+      "source_id": "f908a6dbc2221a1c-18a82794aad0cc00",
+      "provider": "eurostat",
+      "request_id": "f908a6dbc2221a1c82f64a27ed6e103c387fb173f90dbda3433d4eec42722f61",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=ES&sinceTimePeriod=2021-01&untilTimePeriod=2021-12",
+      "sha256": "18a82794aad0cc0092faf0b03252dd426c149a77efbded927f31708c0422deed",
+      "path": "data/raw/eurostat/f908a6dbc2221a1c82f64a27ed6e103c387fb173f90dbda3433d4eec42722f61/18a82794aad0cc0092faf0b03252dd426c149a77efbded927f31708c0422deed.json",
+      "bytes": 31521,
+      "retrieved_at": "2026-09-28T09:06:26.951539+00:00"
+    },
+    {
+      "source_id": "9da0e3f03ea0d567-13a5890469649002",
+      "provider": "eurostat",
+      "request_id": "9da0e3f03ea0d5674d7d1f5fbffb9bb6fe47e6aa92afe8329fa9457e0733044a",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=ES&sinceTimePeriod=2022-01&untilTimePeriod=2022-12",
+      "sha256": "13a589046964900243e4cc8fbb2a775e1ff156d04e5243406532d897e4a38898",
+      "path": "data/raw/eurostat/9da0e3f03ea0d5674d7d1f5fbffb9bb6fe47e6aa92afe8329fa9457e0733044a/13a589046964900243e4cc8fbb2a775e1ff156d04e5243406532d897e4a38898.json",
+      "bytes": 33242,
+      "retrieved_at": "2026-09-28T09:06:28.141092+00:00"
+    },
+    {
+      "source_id": "77e7f629a8d53c1a-df1fc2da79a2d703",
+      "provider": "eurostat",
+      "request_id": "77e7f629a8d53c1ad2e9033d7aee4981b8e2d53dd3cf670b9838343651191053",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=ES&sinceTimePeriod=2023-01&untilTimePeriod=2023-12",
+      "sha256": "df1fc2da79a2d703b46dfdaca2beafe0a10eedd3dfc3ca6ed0ead78b7cef1f34",
+      "path": "data/raw/eurostat/77e7f629a8d53c1ad2e9033d7aee4981b8e2d53dd3cf670b9838343651191053/df1fc2da79a2d703b46dfdaca2beafe0a10eedd3dfc3ca6ed0ead78b7cef1f34.json",
+      "bytes": 32759,
+      "retrieved_at": "2026-09-28T09:06:29.466455+00:00"
+    },
+    {
+      "source_id": "edeccb67c62163ce-b7c37b30e9253e68",
+      "provider": "eurostat",
+      "request_id": "edeccb67c62163ce440cbd72196b9e602e7c18fa4d4ee2ef9651b03b333cdfe1",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=ES&sinceTimePeriod=2024-01&untilTimePeriod=2024-12",
+      "sha256": "b7c37b30e9253e68130f938a6e59d381e8ad5375a5679a69a51ea87efae85b16",
+      "path": "data/raw/eurostat/edeccb67c62163ce440cbd72196b9e602e7c18fa4d4ee2ef9651b03b333cdfe1/b7c37b30e9253e68130f938a6e59d381e8ad5375a5679a69a51ea87efae85b16.json",
+      "bytes": 33377,
+      "retrieved_at": "2026-09-28T09:06:30.879891+00:00"
+    },
+    {
+      "source_id": "e8243ff01ee010d8-4f5c6aa5b4d4a162",
+      "provider": "eurostat",
+      "request_id": "e8243ff01ee010d8058623a8da6ac59a281b115838beb1ef5d8dcdc0355e5e59",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87113090&reporter=ES&sinceTimePeriod=2025-01&untilTimePeriod=2025-12",
+      "sha256": "4f5c6aa5b4d4a1628be55ec3e6837854c05dad2f0b91e76e5943e5d8cd4c37e2",
+      "path": "data/raw/eurostat/e8243ff01ee010d8058623a8da6ac59a281b115838beb1ef5d8dcdc0355e5e59/4f5c6aa5b4d4a1628be55ec3e6837854c05dad2f0b91e76e5943e5d8cd4c37e2.json",
+      "bytes": 33566,
+      "retrieved_at": "2026-09-28T09:06:32.171118+00:00"
+    },
+    {
+      "source_id": "b714a9213b2d4f89-abb03b7e29823fa0",
+      "provider": "eurostat",
+      "request_id": "b714a9213b2d4f890b85970514f5ac7bb864b9678b93ce4f3856c4b2a954d92f",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=ES&sinceTimePeriod=2018-01&untilTimePeriod=2018-12",
+      "sha256": "abb03b7e29823fa032b639909ce01ca25dafceb44e9a02beaf73fc4a77d7c1c2",
+      "path": "data/raw/eurostat/b714a9213b2d4f890b85970514f5ac7bb864b9678b93ce4f3856c4b2a954d92f/abb03b7e29823fa032b639909ce01ca25dafceb44e9a02beaf73fc4a77d7c1c2.json",
+      "bytes": 36968,
+      "retrieved_at": "2026-09-28T09:06:33.339079+00:00"
+    },
+    {
+      "source_id": "e87296e8db7ef033-9a7331488d95fa18",
+      "provider": "eurostat",
+      "request_id": "e87296e8db7ef0338aa4f71a0a7449b7ae9c0d7d3232a8a1f4023ef8af14d264",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=ES&sinceTimePeriod=2019-01&untilTimePeriod=2019-12",
+      "sha256": "9a7331488d95fa18d8736fd0f271927b296f937d4b1b7ff4d0ccd1f3ca2846d3",
+      "path": "data/raw/eurostat/e87296e8db7ef0338aa4f71a0a7449b7ae9c0d7d3232a8a1f4023ef8af14d264/9a7331488d95fa18d8736fd0f271927b296f937d4b1b7ff4d0ccd1f3ca2846d3.json",
+      "bytes": 37428,
+      "retrieved_at": "2026-09-28T09:06:34.655991+00:00"
+    },
+    {
+      "source_id": "17282481b9147aab-406e1b51f7cac8a8",
+      "provider": "eurostat",
+      "request_id": "17282481b9147aab437455b319debd3e579c6608e81e95dedf7c9a4ce696eb03",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=ES&sinceTimePeriod=2020-01&untilTimePeriod=2020-12",
+      "sha256": "406e1b51f7cac8a89cc457647fa1d1ef7c2ab4a2e9a2034331bf67d07c326e1f",
+      "path": "data/raw/eurostat/17282481b9147aab437455b319debd3e579c6608e81e95dedf7c9a4ce696eb03/406e1b51f7cac8a89cc457647fa1d1ef7c2ab4a2e9a2034331bf67d07c326e1f.json",
+      "bytes": 36466,
+      "retrieved_at": "2026-09-28T09:06:35.830810+00:00"
+    },
+    {
+      "source_id": "77ab1039147ae2f4-ff95eb74d662878e",
+      "provider": "eurostat",
+      "request_id": "77ab1039147ae2f48bddfe1b8fc8fa7b647a5393071dd6e234c385f299be3d7a",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=ES&sinceTimePeriod=2021-01&untilTimePeriod=2021-12",
+      "sha256": "ff95eb74d662878ecef62b076e2be0273b8c54acb535208075134ad5822cf3bc",
+      "path": "data/raw/eurostat/77ab1039147ae2f48bddfe1b8fc8fa7b647a5393071dd6e234c385f299be3d7a/ff95eb74d662878ecef62b076e2be0273b8c54acb535208075134ad5822cf3bc.json",
+      "bytes": 36612,
+      "retrieved_at": "2026-09-28T09:06:37.344179+00:00"
+    },
+    {
+      "source_id": "b001355b35ebc4d0-f3c17c04377465ad",
+      "provider": "eurostat",
+      "request_id": "b001355b35ebc4d029d2c1c13079ef216476787273a28522b23762d8d01908fa",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=ES&sinceTimePeriod=2022-01&untilTimePeriod=2022-12",
+      "sha256": "f3c17c04377465ad39e5808954f5ee33b06f25b5c60809c63315e78a2077168e",
+      "path": "data/raw/eurostat/b001355b35ebc4d029d2c1c13079ef216476787273a28522b23762d8d01908fa/f3c17c04377465ad39e5808954f5ee33b06f25b5c60809c63315e78a2077168e.json",
+      "bytes": 36105,
+      "retrieved_at": "2026-09-28T09:06:38.544164+00:00"
+    },
+    {
+      "source_id": "aebd89c3df00a9c3-59df36c5793e6a48",
+      "provider": "eurostat",
+      "request_id": "aebd89c3df00a9c39ebd5cf7860384847ca309e8a20dc84871deb93575da5abc",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=ES&sinceTimePeriod=2023-01&untilTimePeriod=2023-12",
+      "sha256": "59df36c5793e6a4837d231215d305e8fcc1c4b80bb361b72d4041942dccb53fd",
+      "path": "data/raw/eurostat/aebd89c3df00a9c39ebd5cf7860384847ca309e8a20dc84871deb93575da5abc/59df36c5793e6a4837d231215d305e8fcc1c4b80bb361b72d4041942dccb53fd.json",
+      "bytes": 35311,
+      "retrieved_at": "2026-09-28T09:06:39.651951+00:00"
+    },
+    {
+      "source_id": "001b6c5f16cd1d56-0fce0fdc48f1404e",
+      "provider": "eurostat",
+      "request_id": "001b6c5f16cd1d56ba8c7fe0e2d4571d5a0ecbe59786303ec628bfd44390f958",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=ES&sinceTimePeriod=2024-01&untilTimePeriod=2024-12",
+      "sha256": "0fce0fdc48f1404e923f03e7835b6e4fa557bfa038a9c3a0a96109872af8785c",
+      "path": "data/raw/eurostat/001b6c5f16cd1d56ba8c7fe0e2d4571d5a0ecbe59786303ec628bfd44390f958/0fce0fdc48f1404e923f03e7835b6e4fa557bfa038a9c3a0a96109872af8785c.json",
+      "bytes": 38034,
+      "retrieved_at": "2026-09-28T09:06:40.945526+00:00"
+    },
+    {
+      "source_id": "2df506d6110f5a3e-3462eeb106159a64",
+      "provider": "eurostat",
+      "request_id": "2df506d6110f5a3e5ab8bcb844e7e6b57925405b480b62421addeabc13d8f67a",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87114000&reporter=ES&sinceTimePeriod=2025-01&untilTimePeriod=2025-12",
+      "sha256": "3462eeb106159a64a687244fa5446606c85b812d672df12cfdfd014465c44e02",
+      "path": "data/raw/eurostat/2df506d6110f5a3e5ab8bcb844e7e6b57925405b480b62421addeabc13d8f67a/3462eeb106159a64a687244fa5446606c85b812d672df12cfdfd014465c44e02.json",
+      "bytes": 38399,
+      "retrieved_at": "2026-09-28T09:06:42.126383+00:00"
+    },
+    {
+      "source_id": "875fab1eb8718690-aff28628d47e9577",
+      "provider": "eurostat",
+      "request_id": "875fab1eb8718690a43c5e6753c8f827a16f603d1ec727be34773e4642fcd690",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=ES&sinceTimePeriod=2018-01&untilTimePeriod=2018-12",
+      "sha256": "aff28628d47e9577bba114a12226f2749ba1832b4131c53285434c8fffbc09f1",
+      "path": "data/raw/eurostat/875fab1eb8718690a43c5e6753c8f827a16f603d1ec727be34773e4642fcd690/aff28628d47e9577bba114a12226f2749ba1832b4131c53285434c8fffbc09f1.json",
+      "bytes": 36379,
+      "retrieved_at": "2026-09-28T09:06:43.256468+00:00"
+    },
+    {
+      "source_id": "d0a319a84373a3db-2dde3b43914a82e8",
+      "provider": "eurostat",
+      "request_id": "d0a319a84373a3db133786438d36e52220eef4a0e38253a947e9b63dd41143af",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=ES&sinceTimePeriod=2019-01&untilTimePeriod=2019-12",
+      "sha256": "2dde3b43914a82e80a37ba1fa1073ff415d779f6ce4055a98291649e942e8078",
+      "path": "data/raw/eurostat/d0a319a84373a3db133786438d36e52220eef4a0e38253a947e9b63dd41143af/2dde3b43914a82e80a37ba1fa1073ff415d779f6ce4055a98291649e942e8078.json",
+      "bytes": 35734,
+      "retrieved_at": "2026-09-28T09:06:44.339592+00:00"
+    },
+    {
+      "source_id": "eefbdb36385c2017-185973d4940c6760",
+      "provider": "eurostat",
+      "request_id": "eefbdb36385c20170f4ced0963fe056a1190c98bcced8967e672c37adbf878f3",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=ES&sinceTimePeriod=2020-01&untilTimePeriod=2020-12",
+      "sha256": "185973d4940c6760d67e0d16be4242dca020890608833e06ded09f6d80cda1a3",
+      "path": "data/raw/eurostat/eefbdb36385c20170f4ced0963fe056a1190c98bcced8967e672c37adbf878f3/185973d4940c6760d67e0d16be4242dca020890608833e06ded09f6d80cda1a3.json",
+      "bytes": 35285,
+      "retrieved_at": "2026-09-28T09:06:45.411359+00:00"
+    },
+    {
+      "source_id": "aa542aace2a29159-a7709d17cdb7792b",
+      "provider": "eurostat",
+      "request_id": "aa542aace2a2915921ea5bdfb6b0e0186debeaa2c01b0fcb3a929d375d86ea21",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=ES&sinceTimePeriod=2021-01&untilTimePeriod=2021-12",
+      "sha256": "a7709d17cdb7792b912cc9d1d9a7aec238c9567b52346175752d7cdc64a3f9e0",
+      "path": "data/raw/eurostat/aa542aace2a2915921ea5bdfb6b0e0186debeaa2c01b0fcb3a929d375d86ea21/a7709d17cdb7792b912cc9d1d9a7aec238c9567b52346175752d7cdc64a3f9e0.json",
+      "bytes": 36225,
+      "retrieved_at": "2026-09-28T09:06:46.550311+00:00"
+    },
+    {
+      "source_id": "d55a21638db6a0f6-5da58078858b622f",
+      "provider": "eurostat",
+      "request_id": "d55a21638db6a0f6e16d33c3f43c2084534e62dc472fa735b2d4874883570e8d",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=ES&sinceTimePeriod=2022-01&untilTimePeriod=2022-12",
+      "sha256": "5da58078858b622f3c10e3ac0eef33f232c05443c3d13983e12e965dd723a5c5",
+      "path": "data/raw/eurostat/d55a21638db6a0f6e16d33c3f43c2084534e62dc472fa735b2d4874883570e8d/5da58078858b622f3c10e3ac0eef33f232c05443c3d13983e12e965dd723a5c5.json",
+      "bytes": 37479,
+      "retrieved_at": "2026-09-28T09:06:47.861116+00:00"
+    },
+    {
+      "source_id": "58a279031448589b-9e368a54cedf011c",
+      "provider": "eurostat",
+      "request_id": "58a279031448589b97dfb90af128fb4bef2fd2e71ee57f11f9923e04c40c2bd4",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=ES&sinceTimePeriod=2023-01&untilTimePeriod=2023-12",
+      "sha256": "9e368a54cedf011c10cd13cdf07184817213e79ac273c54ab5bd2ca0525730a7",
+      "path": "data/raw/eurostat/58a279031448589b97dfb90af128fb4bef2fd2e71ee57f11f9923e04c40c2bd4/9e368a54cedf011c10cd13cdf07184817213e79ac273c54ab5bd2ca0525730a7.json",
+      "bytes": 36533,
+      "retrieved_at": "2026-09-28T09:06:48.981114+00:00"
+    },
+    {
+      "source_id": "38d511fe503e7e02-1a5f8f9142a7d1c8",
+      "provider": "eurostat",
+      "request_id": "38d511fe503e7e02d1e7cec17029cdbb9511eca7a11638c8e4d0edd98733fd84",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=ES&sinceTimePeriod=2024-01&untilTimePeriod=2024-12",
+      "sha256": "1a5f8f9142a7d1c887339d9c5eba25881f395d4969cae9f941fc2f4a4b4d82e0",
+      "path": "data/raw/eurostat/38d511fe503e7e02d1e7cec17029cdbb9511eca7a11638c8e4d0edd98733fd84/1a5f8f9142a7d1c887339d9c5eba25881f395d4969cae9f941fc2f4a4b4d82e0.json",
+      "bytes": 37563,
+      "retrieved_at": "2026-09-28T09:06:50.194259+00:00"
+    },
+    {
+      "source_id": "b56458bf86954095-71cf0be88ca384dc",
+      "provider": "eurostat",
+      "request_id": "b56458bf869540959a9650401213b4559238a14ab7f6df5dc8f73b86425d4c8f",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?flow=1&flow=2&freq=M&lang=EN&product=87115000&reporter=ES&sinceTimePeriod=2025-01&untilTimePeriod=2025-12",
+      "sha256": "71cf0be88ca384dc975cd62f8b34638de38987310837e5b5b7f027f938b061aa",
+      "path": "data/raw/eurostat/b56458bf869540959a9650401213b4559238a14ab7f6df5dc8f73b86425d4c8f/71cf0be88ca384dc975cd62f8b34638de38987310837e5b5b7f027f938b061aa.json",
+      "bytes": 38370,
+      "retrieved_at": "2026-09-28T09:06:51.336076+00:00"
+    }
+  ]
+}
