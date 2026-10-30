@@ -6,14 +6,13 @@ COLORS = ["#246b5c", "#cd8844", "#567897", "#885f84", "#607264", "#bc5c50"]
 
 
 MODEL_LABELS = {
-    "last_month": "Previous month",
+    "latest_known": "Latest available month",
     "seasonal_naive": "Same month last year",
-    "ridge_raw_seasonal_a10": "Ridge: raw EUR + season, alpha 10",
-    "ridge_log_lags_a10": "Ridge: log EUR lags, alpha 10",
-    "ridge_log_seasonal_a1": "Ridge: log EUR + season, alpha 1",
-    "ridge_log_seasonal_a10": "Ridge: log EUR + season, alpha 10",
-    "ridge_log_seasonal_a100": "Ridge: log EUR + season, alpha 100",
+    "ridge_raw_seasonal_a10": "Ridge + season",
+    "ridge_raw_lags_a10": "Ridge, past values only",
+    "ridge_log_seasonal_a10": "Log Ridge + season",
 }
+PRODUCT_LABELS = {"87113090": "380-500 cc", "87114000": "500-800 cc", "87115000": "Above 800 cc"}
 
 
 def set_style():
@@ -37,3 +36,8 @@ def set_style():
             "axes.axisbelow": True,
         }
     )
+
+
+def short_label(label):
+    """Hide historical footnotes in chart labels; preserve source labels in the data."""
+    return label.split(" (")[0]

@@ -48,7 +48,7 @@ def main() -> None:
         notebooks = [path for path in notebooks if path.name == args.notebook]
         if len(notebooks) != 1:
             parser.error(
-                "The notebook filename must match one of notebooks/01_*.ipynb to 03_*.ipynb."
+                "The notebook filename must match one of notebooks/01_*.ipynb to 04_*.ipynb."
             )
     output_dir = root / "data/processed"
     output_dir.mkdir(parents=True, exist_ok=True)

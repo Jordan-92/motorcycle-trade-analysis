@@ -36,7 +36,7 @@ def test_changed_prepared_file_rejected(tmp_path):
     (tmp_path / "data").mkdir()
     (tmp_path / "data/source_manifest.json").write_text(json.dumps({"sources": []}))
     frame = pd.DataFrame({"example": [1]})
-    save_prepared(tmp_path, frame, frame)
+    save_prepared(tmp_path, frame, frame, frame)
     load_prepared(tmp_path)
     (tmp_path / "data/processed/trade.parquet").write_bytes(b"broken")
     with pytest.raises(ValueError, match="Prepared file changed"):

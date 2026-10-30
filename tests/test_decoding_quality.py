@@ -8,6 +8,7 @@ from pandas.testing import assert_frame_equal
 from moto_study.decoding import category_codes, cell_at, decode_trade
 from moto_study.quality import (
     assert_quality,
+    country_totals,
     monthly_totals,
     prepare_trade,
     quality_checks,
@@ -47,24 +48,48 @@ def test_absent_flag_is_not_a_missing_measure(cube, source):
     assert row.value_eur == 10000 and row.value_eur_status == ""
 
 
-@pytest.mark.parametrize("problem", ["missing", "flagged"])
-def test_partial_monthly_sum_is_not_a_forecast_target(trade_history, problem):
-    row = trade_history.index[0]
-    if problem == "missing":
-        trade_history.loc[row, "value_eur"] = np.nan
-    else:
-        trade_history.loc[row, "value_eur_status"] = "c"
-    monthly = monthly_totals(trade_history)
-    first = monthly.iloc[0]
-    assert np.isnan(first.value_eur) and first.n_partners == 2
-    assert first.n_missing_value == (problem == "missing")
-    assert first.n_flagged_value == (problem == "flagged")
-    assert monthly.value_eur.iloc[1:].notna().all()
+def test_route_subset_is_not_a_national_forecast_target(trade_history):
+    with pytest.raises(ValueError, match="reconciled"):
+        monthly_totals(trade_history)
 
 
-def test_observed_zero_total_remains_zero(trade_history):
-    trade_history.loc[trade_history.month.eq("2018-01-01"), "value_eur"] = 0
-    assert monthly_totals(trade_history).value_eur.iloc[0] == 0
+def test_world_and_unallocated_values_reconcile(cube, source, scope):
+    raw = decode_trade(cube, source)
+    extra = raw.loc[raw.partner.eq("JP")].assign(partner="QW")
+    raw.loc[raw.partner.eq("WORLD"), ["value_eur", "mass_100kg", "supplementary_quantity"]] *= 2
+    raw = pd.concat([raw, extra], ignore_index=True)
+    trade, _, _ = prepare_trade(raw, scope)
+    totals = country_totals(raw, trade)
+    assert totals.value_eur.eq(20_000).all()
+    assert totals.known_value_share.eq(0.5).all()
+    assert totals.unallocated_value_eur.eq(10_000).all()
+    assert monthly_totals(totals).value_eur.eq(20_000).all()
+    totals.loc[0, "value_eur_status"] = "c"
+    assert pd.isna(monthly_totals(totals).loc[0, "value_eur"])
+
+
+def test_wrong_world_total_fails(cube, source, scope):
+    raw = decode_trade(cube, source)
+    raw.loc[raw.partner.eq("WORLD"), "value_eur"] += 1
+    trade, _, _ = prepare_trade(raw, scope)
+    with pytest.raises(ValueError, match="reconcile"):
+        country_totals(raw, trade)
+
+
+@pytest.mark.parametrize("partner", ["XS", "XK", "XC", "XL"])
+def test_valid_non_iso_partners_are_kept(cube, source, scope, partner):
+    raw = decode_trade(cube, source).replace({"partner": {"JP": partner}})
+    trade, _, _ = prepare_trade(raw, scope)
+    assert set(trade.partner) == {partner}
+    assert country_totals(raw, trade).known_value_share.eq(1).all()
+    assert trade.items_reported.eq(2).all()
+    assert trade.value_eur_per_item.eq(5_000).all()
+
+
+def test_unknown_partner_requires_review(cube, source, scope):
+    raw = decode_trade(cube, source).replace({"partner": {"JP": "QQ"}})
+    with pytest.raises(ValueError, match="unknown Eurostat"):
+        prepare_trade(raw, scope)
 
 
 def test_unknown_units_stop(cube, source):
@@ -121,3 +146,23 @@ def test_missing_partition_stops(cube, source, scope):
     scope["end_year"] = 2025
     with pytest.raises(ValueError, match="partition"):
         prepare_trade(decode_trade(cube, source), scope)
+
+
+def test_belgian_world_total_includes_large_unallocated_component():
+    # Real source regression: dropping QW would halve these monthly national values.
+    from pathlib import Path
+
+    from moto_study.io import read_json, select_source
+
+    root = Path(__file__).resolve().parents[1]
+    source = select_source(root, reporter="BE", product="87115000", year=2023)
+    raw = decode_trade(read_json(root, source), source)
+    scope = dict(
+        reporters=["BE"], products=["87115000"], flows=["1", "2"], start_year=2023, end_year=2023
+    )
+    trade, _, _ = prepare_trade(raw, scope)
+    totals = country_totals(raw, trade)
+    march = totals.loc[totals.month.eq("2023-03-01") & totals.flow.eq("1")].iloc[0]
+    assert march.value_eur == 72_723_079
+    assert march.known_partner_value_eur == 35_357_424
+    assert march.unallocated_value_eur == 37_365_655

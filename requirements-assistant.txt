@@ -1,0 +1,2 @@
+# Optional: the existing analysis and local evidence checks do not need this.
+openai==2.54.0

@@ -1,28 +1,29 @@
 # Motorcycle trade analysis
 
-**Python · pandas · scikit-learn · JupyterLab**  
-Six European reporters · 2018–2025 · 80,652 monthly trade observations
+**Python · pandas · scikit-learn · Jupyter · OpenAI API**
 
-A personal project with three objectives: describe trade patterns, compare monthly forecasts and experiment with statistical prioritization for fraud-related review.
+A personal study of motorcycle trade in six European countries, 2018–2025. I check the data, compare monthly forecasts and experiment with priorities for fraud-related review. The analysis starts with one source observation.
 
-## Read the analysis
+## Read the notebooks
 
-1. [Descriptive analysis](notebooks/01_descriptive_analysis.ipynb) — start with one observation; check units, coverage and seasonal patterns.
-2. [Monthly forecasts](notebooks/02_monthly_forecasts.ipynb) — work through one model fit, compare baselines and explain a large miss.
-3. [Statistical prioritization](notebooks/03_statistical_prioritization.ipynb) — compare equal-sized queues and investigate two disagreements.
+1. [Understand the data](notebooks/01_descriptive_analysis.ipynb) — units, national totals, growth, concentration and seasonality.
+2. [Compare forecasts](notebooks/02_monthly_forecasts.ipynb) — correlation, publication delays, simple baselines and a forecast miss.
+3. [Prioritize observations](notebooks/03_statistical_prioritization.ipynb) — seasonal deviations, equal monthly workloads and sensitivity checks.
+4. [Review assistant](notebooks/04_review_assistant.ipynb) — read-only LLM tools, verified facts and saved live responses.
 
-Each notebook contains executed code and figures. Bold sentences give the findings and decisions; short notes explain the terms and how to read the results.
+Outputs are included. **Bold sentences give the findings and decisions.** Short notes explain the technical terms.
 
-## Findings
+## What I found
 
-- Spring/early-summer imports exceed winter in **33/36 country-years** (2018–2023). A year-round route cohort gives similar results.
-- Belgian import growth is **2.68%**, versus **9.75%** for continuously reported routes. Coverage changes the interpretation.
-- Ridge WAPE is **20.63% / 24.93%** in 2024 / 2025, versus **24.94% / 28.02%** for the same-month-last-year baseline. Large misses remain.
-- With **127 review slots each**, the rule and forest share **99 cases** and each selects **28 different cases**. Without fraud labels, neither ranking can be declared more accurate.
+- **Scope matters.** In March 2023, Belgian imports above 800 cc include EUR 37.4m without an identified partner. Dropping it would roughly halve the national total. Reconciliation now checks all 3,456 country/product/direction/month totals.
+- **Seasonality helps, but forecasts remain imperfect.** Ridge WAPE is 24.40% / 25.90% in 2024 / 2025, versus 25.63% / 27.87% for the same month last year. It improves 23/36 series. WAPE measures total absolute error relative to total value; it is not an accuracy rate.
+- **Unusual does not mean fraudulent.** With five slots per month, the rule and forest share 103 of their 120 selections. Rankings are sensitive to settings, and many routes lack enough history. I keep the transparent rule as the reference.
 
-## Run
+The data checks also reveal an implausible item count. I retain the source and explain the issue instead of silently correcting it.
 
-Python 3.12. From the project folder:
+## Run locally
+
+Python 3.12, from this folder:
 
 ```bash
 python3.12 -m venv .venv
@@ -32,17 +33,19 @@ python -m pip install --no-deps -e .
 jupyter lab
 ```
 
-Run notebooks 01–03 in order. To check the full sequence:
+Run notebooks 01–04 in order. The default run is offline:
 
 ```bash
 python scripts/execute_notebooks.py
 python -m pytest -W error
 ```
 
-Raw files are bundled. Reusable functions are in `src/moto_study/`; tests are in `tests/`. Prepared data and the review queue go to `data/processed/`.
+Raw data are bundled. Small reusable functions live in `src/moto_study/`; checks live in `tests/`. Generated tables go to `data/processed/`.
 
-## Limits
+## Optional assistant
 
-Three product codes cover part of motorcycle trade. Rows are monthly aggregates, not individual transactions or retail sales. Revised, already-inspected data support retrospective comparisons; unusual values do not establish fraud.
+Install `requirements-assistant.txt`, then set `RUN_LLM = True` in notebook 04. It uses `OPENAI_API_KEY` or a hidden input prompt. Only selected public-data evidence is sent to OpenAI; API use is billed.
 
-[Sources and units](docs/DATA_SOURCES.md) · [Verification](docs/VERIFICATION.md)
+The LLM chooses read-only checks, supported findings and a next step. Python calculates and renders the factual sentences. Unsupported answers are rejected. Saved prompts, responses and evidence are in [assistant_checks.json](docs/assistant_checks.json); notebook 04 reviews the results. This is a small integration check, not evidence of fraud accuracy or reviewer time saved.
+
+[Sources and limits](docs/DATA_SOURCES.md): revised monthly aggregates, a partial motorcycle market and no verified fraud outcomes. Forecasts remain retrospective despite the publication-delay assumption.

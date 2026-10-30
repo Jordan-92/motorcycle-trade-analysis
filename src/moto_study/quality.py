@@ -8,8 +8,12 @@ import pycountry
 
 from .decoding import GRAIN, MEASURES, ROUTE
 
-COUNTRIES = {country.alpha_2 for country in pycountry.countries}
+# Eurostat's geonomenclature has valid partners outside the ISO list.
+COUNTRIES = {country.alpha_2 for country in pycountry.countries} | {"XS", "XK", "XC", "XL"}
 ALIASES = {"UK": "GB", "EL": "GR"}
+UNALLOCATED = {"QS", "QV", "QW"}
+TOTAL_KEY = ["month", "reporter", "product", "flow"]
+ITEM_PRODUCTS = {"87113090", "87114000", "87115000"}  # CN supplementary unit: p/st.
 
 
 def assert_source_scope(raw, scope):
@@ -36,10 +40,15 @@ def prepare_trade(raw, scope):
     frame = raw.copy()
     frame["partner_original"] = frame.partner
     frame["partner"] = frame.partner.replace(ALIASES)
+    totals = frame.partner.eq("WORLD") | frame.partner.str.startswith(("EXT_", "INT_"))
+    unknown = set(frame.loc[~totals, "partner"]) - COUNTRIES - UNALLOCATED
+    if unknown:
+        raise ValueError(f"Review unknown Eurostat partner codes: {sorted(unknown)}")
     excluded = frame.loc[~frame.partner.isin(COUNTRIES) | frame.reporter.eq(frame.partner)].copy()
     excluded["exclusion_reason"] = np.where(
-        excluded.reporter.eq(excluded.partner), "self_partner", "aggregate_or_special_partner"
+        excluded.partner.isin(UNALLOCATED), "unallocated_partner", "overlapping_total"
     )
+    excluded.loc[excluded.reporter.eq(excluded.partner), "exclusion_reason"] = "self_partner"
     frame = frame.drop(index=excluded.index).copy()
     if frame.duplicated(GRAIN).any():
         raise ValueError("Country aliases created a duplicate observation grain.")
@@ -55,6 +64,18 @@ def prepare_trade(raw, scope):
     frame["unit_value_eur_per_kg"] = frame.value_eur.div(
         frame.net_mass_kg.where(frame.net_mass_kg.gt(0))
     )
+    valid_items = (
+        frame["product"].isin(ITEM_PRODUCTS)
+        & frame.supplementary_quantity.gt(0)
+        & frame.supplementary_quantity_status.eq("")
+    )
+    frame["items_reported"] = frame.supplementary_quantity.where(valid_items)
+    frame["value_eur_per_item"] = (
+        frame.value_eur.where(frame.value_eur_status.eq("")) / frame.items_reported
+    )
+    frame["mass_kg_per_item"] = (
+        frame.net_mass_kg.where(frame.mass_100kg_status.eq("")) / frame.items_reported
+    )
     expected = set(
         itertools.product(
             scope["reporters"], scope["products"], range(scope["start_year"], scope["end_year"] + 1)
@@ -64,6 +85,45 @@ def prepare_trade(raw, scope):
     if expected - observed:
         raise ValueError("Entire reporter/product/year partition absent.")
     return frame.sort_values(GRAIN).reset_index(drop=True), excluded, quarantine
+
+
+def country_totals(raw, trade):
+    """Use WORLD once; reconcile it with detailed and unallocated partners."""
+    world = raw.loc[raw.partner.eq("WORLD")].set_index(TOTAL_KEY).sort_index()
+    if world.empty or world.index.has_duplicates:
+        raise ValueError("Require one WORLD total per country, product, direction and month.")
+    unallocated = raw.loc[raw.partner.isin(UNALLOCATED)]
+    component_columns = [*TOTAL_KEY, *MEASURES.values()]
+    components = pd.concat(
+        [x[component_columns] for x in [trade, unallocated] if not x.empty], ignore_index=True
+    )
+    if set(map(tuple, components[TOTAL_KEY].to_numpy())) != set(world.index):
+        raise ValueError("Country totals and partner components cover different months.")
+    columns = list(MEASURES.values())
+    if components[columns].isna().any().any() or world[columns].isna().any().any():
+        raise ValueError("Missing measurements prevent country-total reconciliation.")
+    if not np.isfinite(components[columns]).all().all() or components[columns].lt(0).any().any():
+        raise ValueError("Invalid partner component.")
+    summed = components.groupby(TOTAL_KEY)[columns].sum().reindex(world.index)
+    if not np.isfinite(world[columns]).all().all() or world[columns].lt(0).any().any():
+        raise ValueError("Invalid country total.")
+    if not np.allclose(summed, world[columns], rtol=1e-10, atol=0.01):
+        raise ValueError("Partner components do not reconcile with WORLD totals.")
+    result = world[[*columns, *[f"{c}_status" for c in columns], "source_id"]].copy()
+    result["known_partner_value_eur"] = (
+        trade.groupby(TOTAL_KEY).value_eur.sum().reindex(world.index, fill_value=0)
+    )
+    result["unallocated_value_eur"] = (
+        unallocated.groupby(TOTAL_KEY).value_eur.sum().reindex(world.index, fill_value=0)
+    )
+    result["known_value_share"] = result.known_partner_value_eur / result.value_eur.where(
+        result.value_eur.gt(0)
+    )
+    result["n_partners"] = (
+        trade.groupby(TOTAL_KEY).partner.nunique().reindex(world.index, fill_value=0)
+    )
+    result["net_mass_kg"] = result.mass_100kg * 100
+    return result.reset_index()
 
 
 def quality_checks(trade, source_ids):
@@ -154,23 +214,13 @@ def assert_quality(checks):
         raise ValueError(f"Failed quality contracts: {failed}")
 
 
-def monthly_totals(trade):
-    # A partial sum is not a complete target. Keep its coverage counts visible.
-    monthly = (
-        trade.assign(flagged_value=trade.value_eur_status.fillna("").ne(""))
-        .groupby(["month", "reporter", "product", "flow"], observed=True)
-        .agg(
-            value_eur=("value_eur", lambda x: x.sum(min_count=1)),
-            n_observed=("partner", "size"),
-            n_partners=("partner", "nunique"),
-            n_missing_value=("value_eur", lambda x: x.isna().sum()),
-            n_flagged_value=("flagged_value", "sum"),
-        )
-        .reset_index()
-    )
-    incomplete = monthly.n_missing_value.gt(0) | monthly.n_flagged_value.gt(0)
-    monthly.loc[incomplete, "value_eur"] = np.nan
-    return monthly
+def monthly_totals(totals):
+    """Forecast the reconciled national total, not a changing subset of partners."""
+    if "known_partner_value_eur" not in totals or totals.duplicated(TOTAL_KEY).any():
+        raise ValueError("Use the reconciled country_totals table from notebook 01.")
+    result = totals.copy()
+    result.loc[~result.value_eur_status.eq(""), "value_eur"] = np.nan
+    return result
 
 
 def route_coverage(trade):

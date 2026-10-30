@@ -1,0 +1,1656 @@
+{
+  "checked_utc": "2026-10-30T09:44:28.682050+00:00",
+  "source_manifest_sha256": "0b3a2a61ffedd366f070f2c262e49adc8906f4768b71e97b2ad32ca384e1d428",
+  "code_sha256": {
+    "src/moto_study/assistant.py": "07f6935dca7defb3a7a4cf7bb35ced76cd490182c92b888d066fa9a584b2949d",
+    "src/moto_study/risk.py": "23f370e8465d03ff1813f7424be99a6c50ff8e8dda964d21d6cd50c96e065d7a",
+    "src/moto_study/quality.py": "67c8a6bfdfa0d5a470f8a280c6848aaeb2ce5fd42eb5b74fd47e61b931a4db6d"
+  },
+  "revision_notes": "First revised run: five responses completed; one was rejected with RuntimeError. The fraud answer omitted an explicit probability limit. Raised the bounded response budget; a second run completed all six but still omitted the fraud boundary in one answer. The boundary is now enforced in Python. This file contains the final repeat of all six cases.",
+  "cases": [
+    {
+      "scenario": "forest selection",
+      "key": {
+        "month": "2024-01-01",
+        "reporter": "DE",
+        "partner": "TR",
+        "product": "87115000",
+        "flow": "2"
+      },
+      "question": "Why did the forest select this? Which features caused its decision?",
+      "seconds": 12.1,
+      "answer": "- Within this month's 423 eligible review rows, the forest ranks it 2 and the rule 7; each has up to 5 slots. Forest: selected. Rule: not selected. [explain_ranks]\n- The strongest rule deviation is net mass (kg), after comparing year-on-year changes with prior history. [explain_ranks]\n- The previous twelve calendar months contain 12 usable EUR/kg observations. [compare_history]\n\nLimit: The strongest rule signal does not explain the forest's decision. These aggregates cannot establish fraud, its probability, or a weather effect.\nNext check: Check the reported value, mass and item count against the source record.",
+      "selection": {
+        "findings": [
+          "selection",
+          "rule_signal",
+          "history"
+        ],
+        "limit": "forest",
+        "next_check": "source"
+      },
+      "evidence": [
+        {
+          "tool": "inspect_observation",
+          "result": {
+            "observation": {
+              "month": "2024-01-01T00:00:00.000",
+              "reporter": "DE",
+              "partner": "TR",
+              "product": "87115000",
+              "flow": "2",
+              "value_eur": 4940302.0,
+              "net_mass_kg": 94568.0,
+              "unit_value_eur_per_kg": 52.2407368243,
+              "value_eur_status": "",
+              "mass_100kg_status": "",
+              "source_id": "916ba69e44ff82d9-5d620a929eadd614",
+              "product_label": "Motorcycles, incl. mopeds, with reciprocating internal combustion piston engine of a cylinder capacity > 800 cm\u00b3",
+              "items_reported": 399.0,
+              "value_eur_per_item": 12381.709273183,
+              "mass_kg_per_item": 237.0125313283,
+              "supplementary_quantity_status": ""
+            },
+            "direction": "exports",
+            "route": "DE reports exports to TR.",
+            "grain": "One monthly total for a reporter, partner, product and direction; not one shipment or declaration.",
+            "units": "EUR; kg; EUR/kg; supplementary quantity in items for these CN codes. EUR/item is an aggregate trade average, not a retail price.",
+            "flags": "Empty means no source flag reported; null means missing information.",
+            "facts": {
+              "observation": "DE reports exports to TR. In 2024-01, reported value was EUR 4,940,302 and net mass was 94,568 kg. [inspect_observation]",
+              "unit_value": "Value per kg was EUR 52.24; this is not a price per motorcycle. [inspect_observation]",
+              "items": "The aggregate reports 399 items: EUR 12,382 and 237.0 kg per item on average. [inspect_observation]",
+              "flags": "No source flag is reported; this does not verify the measurements. [inspect_observation]"
+            }
+          }
+        },
+        {
+          "tool": "compare_history",
+          "result": {
+            "year_on_year": [
+              {
+                "measure": "value_eur",
+                "change_pct": 11483.35756154748
+              },
+              {
+                "measure": "net_mass_kg",
+                "change_pct": 21540.274599542336
+              },
+              {
+                "measure": "unit_value_eur_per_kg",
+                "change_pct": -46.47314890453167
+              }
+            ],
+            "reference": [
+              {
+                "measure": "value_eur",
+                "usable_months": 12,
+                "historical_reference": 3485028.9141581003
+              },
+              {
+                "measure": "net_mass_kg",
+                "usable_months": 12,
+                "historical_reference": 64998.09597211293
+              },
+              {
+                "measure": "unit_value_eur_per_kg",
+                "usable_months": 12,
+                "historical_reference": 55.78564710821264
+              }
+            ],
+            "reference_definition": "Previous 12 calendar months, excluding the selected month: exp(median(log(value))); needs 9 positive, unflagged months.",
+            "recent_months": [
+              {
+                "month": "2023-01-01T00:00:00.000",
+                "value_eur": 42650.0,
+                "net_mass_kg": 437.0,
+                "unit_value_eur_per_kg": 97.5972540046,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-02-01T00:00:00.000",
+                "value_eur": 3916510.0,
+                "net_mass_kg": 83988.0,
+                "unit_value_eur_per_kg": 46.6317807306,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-03-01T00:00:00.000",
+                "value_eur": 3773218.0,
+                "net_mass_kg": 70039.0,
+                "unit_value_eur_per_kg": 53.8730992733,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-04-01T00:00:00.000",
+                "value_eur": 2961949.0,
+                "net_mass_kg": 60320.0,
+                "unit_value_eur_per_kg": 49.1039290451,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-05-01T00:00:00.000",
+                "value_eur": 9711703.0,
+                "net_mass_kg": 176712.0,
+                "unit_value_eur_per_kg": 54.9578013944,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-06-01T00:00:00.000",
+                "value_eur": 6859113.0,
+                "net_mass_kg": 123146.0,
+                "unit_value_eur_per_kg": 55.6990320433,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-07-01T00:00:00.000",
+                "value_eur": 2202559.0,
+                "net_mass_kg": 43571.0,
+                "unit_value_eur_per_kg": 50.5510316495,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-08-01T00:00:00.000",
+                "value_eur": 1411225.0,
+                "net_mass_kg": 25258.0,
+                "unit_value_eur_per_kg": 55.8723968644,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-09-01T00:00:00.000",
+                "value_eur": 5091554.0,
+                "net_mass_kg": 85551.0,
+                "unit_value_eur_per_kg": 59.5148391018,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-10-01T00:00:00.000",
+                "value_eur": 3218851.0,
+                "net_mass_kg": 53358.0,
+                "unit_value_eur_per_kg": 60.3255556805,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-11-01T00:00:00.000",
+                "value_eur": 2336153.0,
+                "net_mass_kg": 41554.0,
+                "unit_value_eur_per_kg": 56.2196900419,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-12-01T00:00:00.000",
+                "value_eur": 4137770.0,
+                "net_mass_kg": 71302.0,
+                "unit_value_eur_per_kg": 58.0316120165,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              }
+            ],
+            "same_month_earlier_years": [
+              {
+                "month": "2018-01-01T00:00:00.000",
+                "value_eur": 903728.0,
+                "net_mass_kg": 17479.0,
+                "unit_value_eur_per_kg": 51.7036443732,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2019-01-01T00:00:00.000",
+                "value_eur": 6200.0,
+                "net_mass_kg": 180.0,
+                "unit_value_eur_per_kg": 34.4444444444,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2020-01-01T00:00:00.000",
+                "value_eur": 281445.0,
+                "net_mass_kg": 5802.0,
+                "unit_value_eur_per_kg": 48.5082730093,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2021-01-01T00:00:00.000",
+                "value_eur": 255526.0,
+                "net_mass_kg": 5775.0,
+                "unit_value_eur_per_kg": 44.2469264069,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-01-01T00:00:00.000",
+                "value_eur": 42650.0,
+                "net_mass_kg": 437.0,
+                "unit_value_eur_per_kg": 97.5972540046,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              }
+            ],
+            "limit": "Missing months are not zero. Repeated calendar patterns do not prove a cause.",
+            "facts": {
+              "history": "The previous twelve calendar months contain 12 usable EUR/kg observations. [compare_history]",
+              "recent_ratio": "The median in log space over those months corresponds to EUR 55.79/kg. This comparison alone is not seasonally adjusted. [compare_history]",
+              "yoy_value_eur": "Compared with the same month last year, trade value changed by +11483.4%. This is an observed change, not its cause. [compare_history]",
+              "yoy_net_mass_kg": "Compared with the same month last year, net mass changed by +21540.3%. This is an observed change, not its cause. [compare_history]",
+              "yoy_unit_value_eur_per_kg": "Compared with the same month last year, EUR/kg changed by -46.5%. This is an observed change, not its cause. [compare_history]",
+              "seasonal_history": "There are 5 observed records for this calendar month in earlier years. Repetition can suggest seasonality, but cannot establish its cause. [compare_history]"
+            }
+          }
+        },
+        {
+          "tool": "explain_ranks",
+          "result": {
+            "ranks": [
+              {
+                "queue_group": "forest only",
+                "forest_rank": 2,
+                "rule_rank": 7,
+                "strongest_rule_signal": "net mass (kg)",
+                "rule_selected": false,
+                "forest_selected": true
+              }
+            ],
+            "eligible_pool": 423,
+            "slots_per_method": 5,
+            "scope": "Ranks within this reference-month batch, using revised data. Only eligible rows worth at least EUR 10,000 enter. Empty ranks mean outside that pool, not low risk.",
+            "limit": "Rank 1 is highest priority. Scores are not fraud probabilities. The strongest rule signal explains the rule only, not the forest. No feature attribution for the forest is provided. The rule uses mass and EUR/kg year-on-year log changes, compared with their previous 12 months (at least 9). Value, mass and EUR/kg are related, not independent confirmations.",
+            "facts": {
+              "selection": "Within this month's 423 eligible review rows, the forest ranks it 2 and the rule 7; each has up to 5 slots. Forest: selected. Rule: not selected. [explain_ranks]",
+              "rule_signal": "The strongest rule deviation is net mass (kg), after comparing year-on-year changes with prior history. [explain_ranks]"
+            }
+          }
+        }
+      ],
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "scenario": "rule selection",
+      "key": {
+        "month": "2024-01-01",
+        "reporter": "IT",
+        "partner": "US",
+        "product": "87114000",
+        "flow": "2"
+      },
+      "question": "Why was this selected? Which figures would you check first?",
+      "seconds": 13.53,
+      "answer": "- Within this month's 423 eligible review rows, the forest ranks it 6 and the rule 3; each has up to 5 slots. Forest: not selected. Rule: selected. [explain_ranks]\n- The strongest rule deviation is value per kg (EUR/kg), after comparing year-on-year changes with prior history. [explain_ranks]\n- Compared with the same month last year, EUR/kg changed by +529.6%. This is an observed change, not its cause. [compare_history]\n\nLimit: The strongest rule signal does not explain the forest's decision. These aggregates cannot establish fraud, its probability, or a weather effect.\nNext check: Check earlier records and missing months before interpreting the change.",
+      "selection": {
+        "findings": [
+          "selection",
+          "rule_signal",
+          "yoy_unit_value_eur_per_kg"
+        ],
+        "limit": "forest",
+        "next_check": "history"
+      },
+      "evidence": [
+        {
+          "tool": "inspect_observation",
+          "result": {
+            "observation": {
+              "month": "2024-01-01T00:00:00.000",
+              "reporter": "IT",
+              "partner": "US",
+              "product": "87114000",
+              "flow": "2",
+              "value_eur": 20010376.0,
+              "net_mass_kg": 84193.0,
+              "unit_value_eur_per_kg": 237.6726806267,
+              "value_eur_status": "",
+              "mass_100kg_status": "",
+              "source_id": "c6a541f58fce5cc3-965ea16ff905cd82",
+              "product_label": "Motorcycles, incl. mopeds, with reciprocating internal combustion piston engine of a cylinder capacity > 500 cm\u00b3 but <= 800 cm\u00b3",
+              "items_reported": 643.0,
+              "value_eur_per_item": 31120.3359253499,
+              "mass_kg_per_item": 130.9377916019,
+              "supplementary_quantity_status": ""
+            },
+            "direction": "exports",
+            "route": "IT reports exports to US.",
+            "grain": "One monthly total for a reporter, partner, product and direction; not one shipment or declaration.",
+            "units": "EUR; kg; EUR/kg; supplementary quantity in items for these CN codes. EUR/item is an aggregate trade average, not a retail price.",
+            "flags": "Empty means no source flag reported; null means missing information.",
+            "facts": {
+              "observation": "IT reports exports to US. In 2024-01, reported value was EUR 20,010,376 and net mass was 84,193 kg. [inspect_observation]",
+              "unit_value": "Value per kg was EUR 237.67; this is not a price per motorcycle. [inspect_observation]",
+              "items": "The aggregate reports 643 items: EUR 31,120 and 130.9 kg per item on average. [inspect_observation]",
+              "flags": "No source flag is reported; this does not verify the measurements. [inspect_observation]"
+            }
+          }
+        },
+        {
+          "tool": "compare_history",
+          "result": {
+            "year_on_year": [
+              {
+                "measure": "value_eur",
+                "change_pct": 1366.4934170266872
+              },
+              {
+                "measure": "net_mass_kg",
+                "change_pct": 132.92480495767168
+              },
+              {
+                "measure": "unit_value_eur_per_kg",
+                "change_pct": 529.5995041374774
+              }
+            ],
+            "reference": [
+              {
+                "measure": "value_eur",
+                "usable_months": 12,
+                "historical_reference": 3334519.031077494
+              },
+              {
+                "measure": "net_mass_kg",
+                "usable_months": 12,
+                "historical_reference": 61611.51049114126
+              },
+              {
+                "measure": "unit_value_eur_per_kg",
+                "usable_months": 12,
+                "historical_reference": 49.15347301032762
+              }
+            ],
+            "reference_definition": "Previous 12 calendar months, excluding the selected month: exp(median(log(value))); needs 9 positive, unflagged months.",
+            "recent_months": [
+              {
+                "month": "2023-01-01T00:00:00.000",
+                "value_eur": 1364505.0,
+                "net_mass_kg": 36146.0,
+                "unit_value_eur_per_kg": 37.7498201737,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-02-01T00:00:00.000",
+                "value_eur": 4266222.0,
+                "net_mass_kg": 99984.0,
+                "unit_value_eur_per_kg": 42.6690470475,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-03-01T00:00:00.000",
+                "value_eur": 3465802.0,
+                "net_mass_kg": 79240.0,
+                "unit_value_eur_per_kg": 43.7380363453,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-04-01T00:00:00.000",
+                "value_eur": 3208209.0,
+                "net_mass_kg": 72201.0,
+                "unit_value_eur_per_kg": 44.4344122658,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-05-01T00:00:00.000",
+                "value_eur": 8061504.0,
+                "net_mass_kg": 160825.0,
+                "unit_value_eur_per_kg": 50.1259381315,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-06-01T00:00:00.000",
+                "value_eur": 3512684.0,
+                "net_mass_kg": 64025.0,
+                "unit_value_eur_per_kg": 54.8642561499,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-07-01T00:00:00.000",
+                "value_eur": 3906166.0,
+                "net_mass_kg": 81041.0,
+                "unit_value_eur_per_kg": 48.1998741378,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-08-01T00:00:00.000",
+                "value_eur": 59854.0,
+                "net_mass_kg": 2936.0,
+                "unit_value_eur_per_kg": 20.386239782,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-09-01T00:00:00.000",
+                "value_eur": 4099286.0,
+                "net_mass_kg": 59289.0,
+                "unit_value_eur_per_kg": 69.1407512355,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-10-01T00:00:00.000",
+                "value_eur": 1875841.0,
+                "net_mass_kg": 35064.0,
+                "unit_value_eur_per_kg": 53.4976328998,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-11-01T00:00:00.000",
+                "value_eur": 1103825.0,
+                "net_mass_kg": 20437.0,
+                "unit_value_eur_per_kg": 54.0111073054,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-12-01T00:00:00.000",
+                "value_eur": 710044.0,
+                "net_mass_kg": 9492.0,
+                "unit_value_eur_per_kg": 74.8044669195,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              }
+            ],
+            "same_month_earlier_years": [
+              {
+                "month": "2018-01-01T00:00:00.000",
+                "value_eur": 1501635.0,
+                "net_mass_kg": 41174.0,
+                "unit_value_eur_per_kg": 36.4704667994,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2019-01-01T00:00:00.000",
+                "value_eur": 534722.0,
+                "net_mass_kg": 12001.0,
+                "unit_value_eur_per_kg": 44.5564536289,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2020-01-01T00:00:00.000",
+                "value_eur": 1365835.0,
+                "net_mass_kg": 26844.0,
+                "unit_value_eur_per_kg": 50.8804574579,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2021-01-01T00:00:00.000",
+                "value_eur": 1638271.0,
+                "net_mass_kg": 46919.0,
+                "unit_value_eur_per_kg": 34.9170059038,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2022-01-01T00:00:00.000",
+                "value_eur": 1710465.0,
+                "net_mass_kg": 35444.0,
+                "unit_value_eur_per_kg": 48.2582383478,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-01-01T00:00:00.000",
+                "value_eur": 1364505.0,
+                "net_mass_kg": 36146.0,
+                "unit_value_eur_per_kg": 37.7498201737,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              }
+            ],
+            "limit": "Missing months are not zero. Repeated calendar patterns do not prove a cause.",
+            "facts": {
+              "history": "The previous twelve calendar months contain 12 usable EUR/kg observations. [compare_history]",
+              "recent_ratio": "The median in log space over those months corresponds to EUR 49.15/kg. This comparison alone is not seasonally adjusted. [compare_history]",
+              "yoy_value_eur": "Compared with the same month last year, trade value changed by +1366.5%. This is an observed change, not its cause. [compare_history]",
+              "yoy_net_mass_kg": "Compared with the same month last year, net mass changed by +132.9%. This is an observed change, not its cause. [compare_history]",
+              "yoy_unit_value_eur_per_kg": "Compared with the same month last year, EUR/kg changed by +529.6%. This is an observed change, not its cause. [compare_history]",
+              "seasonal_history": "There are 6 observed records for this calendar month in earlier years. Repetition can suggest seasonality, but cannot establish its cause. [compare_history]"
+            }
+          }
+        },
+        {
+          "tool": "explain_ranks",
+          "result": {
+            "ranks": [
+              {
+                "queue_group": "rule only",
+                "forest_rank": 6,
+                "rule_rank": 3,
+                "strongest_rule_signal": "value per kg (EUR/kg)",
+                "rule_selected": true,
+                "forest_selected": false
+              }
+            ],
+            "eligible_pool": 423,
+            "slots_per_method": 5,
+            "scope": "Ranks within this reference-month batch, using revised data. Only eligible rows worth at least EUR 10,000 enter. Empty ranks mean outside that pool, not low risk.",
+            "limit": "Rank 1 is highest priority. Scores are not fraud probabilities. The strongest rule signal explains the rule only, not the forest. No feature attribution for the forest is provided. The rule uses mass and EUR/kg year-on-year log changes, compared with their previous 12 months (at least 9). Value, mass and EUR/kg are related, not independent confirmations.",
+            "facts": {
+              "selection": "Within this month's 423 eligible review rows, the forest ranks it 6 and the rule 3; each has up to 5 slots. Forest: not selected. Rule: selected. [explain_ranks]",
+              "rule_signal": "The strongest rule deviation is value per kg (EUR/kg), after comparing year-on-year changes with prior history. [explain_ranks]"
+            }
+          }
+        }
+      ],
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "scenario": "weather claim",
+      "key": {
+        "month": "2024-01-01",
+        "reporter": "DE",
+        "partner": "TR",
+        "product": "87115000",
+        "flow": "2"
+      },
+      "question": "Can we conclude that warm weather increased motorcycle sales?",
+      "seconds": 12.49,
+      "answer": "- DE reports exports to TR. In 2024-01, reported value was EUR 4,940,302 and net mass was 94,568 kg. [inspect_observation]\n- There are 5 observed records for this calendar month in earlier years. Repetition can suggest seasonality, but cannot establish its cause. [compare_history]\n- Within this month's 423 eligible review rows, the forest ranks it 2 and the rule 7; each has up to 5 slots. Forest: selected. Rule: not selected. [explain_ranks]\n\nLimit: These data cannot establish fraud, its probability, or a weather effect.\nNext check: Check earlier records and missing months before interpreting the change.",
+      "selection": {
+        "findings": [
+          "observation",
+          "seasonal_history",
+          "selection"
+        ],
+        "limit": "cause",
+        "next_check": "history"
+      },
+      "evidence": [
+        {
+          "tool": "inspect_observation",
+          "result": {
+            "observation": {
+              "month": "2024-01-01T00:00:00.000",
+              "reporter": "DE",
+              "partner": "TR",
+              "product": "87115000",
+              "flow": "2",
+              "value_eur": 4940302.0,
+              "net_mass_kg": 94568.0,
+              "unit_value_eur_per_kg": 52.2407368243,
+              "value_eur_status": "",
+              "mass_100kg_status": "",
+              "source_id": "916ba69e44ff82d9-5d620a929eadd614",
+              "product_label": "Motorcycles, incl. mopeds, with reciprocating internal combustion piston engine of a cylinder capacity > 800 cm\u00b3",
+              "items_reported": 399.0,
+              "value_eur_per_item": 12381.709273183,
+              "mass_kg_per_item": 237.0125313283,
+              "supplementary_quantity_status": ""
+            },
+            "direction": "exports",
+            "route": "DE reports exports to TR.",
+            "grain": "One monthly total for a reporter, partner, product and direction; not one shipment or declaration.",
+            "units": "EUR; kg; EUR/kg; supplementary quantity in items for these CN codes. EUR/item is an aggregate trade average, not a retail price.",
+            "flags": "Empty means no source flag reported; null means missing information.",
+            "facts": {
+              "observation": "DE reports exports to TR. In 2024-01, reported value was EUR 4,940,302 and net mass was 94,568 kg. [inspect_observation]",
+              "unit_value": "Value per kg was EUR 52.24; this is not a price per motorcycle. [inspect_observation]",
+              "items": "The aggregate reports 399 items: EUR 12,382 and 237.0 kg per item on average. [inspect_observation]",
+              "flags": "No source flag is reported; this does not verify the measurements. [inspect_observation]"
+            }
+          }
+        },
+        {
+          "tool": "compare_history",
+          "result": {
+            "year_on_year": [
+              {
+                "measure": "value_eur",
+                "change_pct": 11483.35756154748
+              },
+              {
+                "measure": "net_mass_kg",
+                "change_pct": 21540.274599542336
+              },
+              {
+                "measure": "unit_value_eur_per_kg",
+                "change_pct": -46.47314890453167
+              }
+            ],
+            "reference": [
+              {
+                "measure": "value_eur",
+                "usable_months": 12,
+                "historical_reference": 3485028.9141581003
+              },
+              {
+                "measure": "net_mass_kg",
+                "usable_months": 12,
+                "historical_reference": 64998.09597211293
+              },
+              {
+                "measure": "unit_value_eur_per_kg",
+                "usable_months": 12,
+                "historical_reference": 55.78564710821264
+              }
+            ],
+            "reference_definition": "Previous 12 calendar months, excluding the selected month: exp(median(log(value))); needs 9 positive, unflagged months.",
+            "recent_months": [
+              {
+                "month": "2023-01-01T00:00:00.000",
+                "value_eur": 42650.0,
+                "net_mass_kg": 437.0,
+                "unit_value_eur_per_kg": 97.5972540046,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-02-01T00:00:00.000",
+                "value_eur": 3916510.0,
+                "net_mass_kg": 83988.0,
+                "unit_value_eur_per_kg": 46.6317807306,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-03-01T00:00:00.000",
+                "value_eur": 3773218.0,
+                "net_mass_kg": 70039.0,
+                "unit_value_eur_per_kg": 53.8730992733,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-04-01T00:00:00.000",
+                "value_eur": 2961949.0,
+                "net_mass_kg": 60320.0,
+                "unit_value_eur_per_kg": 49.1039290451,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-05-01T00:00:00.000",
+                "value_eur": 9711703.0,
+                "net_mass_kg": 176712.0,
+                "unit_value_eur_per_kg": 54.9578013944,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-06-01T00:00:00.000",
+                "value_eur": 6859113.0,
+                "net_mass_kg": 123146.0,
+                "unit_value_eur_per_kg": 55.6990320433,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-07-01T00:00:00.000",
+                "value_eur": 2202559.0,
+                "net_mass_kg": 43571.0,
+                "unit_value_eur_per_kg": 50.5510316495,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-08-01T00:00:00.000",
+                "value_eur": 1411225.0,
+                "net_mass_kg": 25258.0,
+                "unit_value_eur_per_kg": 55.8723968644,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-09-01T00:00:00.000",
+                "value_eur": 5091554.0,
+                "net_mass_kg": 85551.0,
+                "unit_value_eur_per_kg": 59.5148391018,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-10-01T00:00:00.000",
+                "value_eur": 3218851.0,
+                "net_mass_kg": 53358.0,
+                "unit_value_eur_per_kg": 60.3255556805,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-11-01T00:00:00.000",
+                "value_eur": 2336153.0,
+                "net_mass_kg": 41554.0,
+                "unit_value_eur_per_kg": 56.2196900419,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-12-01T00:00:00.000",
+                "value_eur": 4137770.0,
+                "net_mass_kg": 71302.0,
+                "unit_value_eur_per_kg": 58.0316120165,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              }
+            ],
+            "same_month_earlier_years": [
+              {
+                "month": "2018-01-01T00:00:00.000",
+                "value_eur": 903728.0,
+                "net_mass_kg": 17479.0,
+                "unit_value_eur_per_kg": 51.7036443732,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2019-01-01T00:00:00.000",
+                "value_eur": 6200.0,
+                "net_mass_kg": 180.0,
+                "unit_value_eur_per_kg": 34.4444444444,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2020-01-01T00:00:00.000",
+                "value_eur": 281445.0,
+                "net_mass_kg": 5802.0,
+                "unit_value_eur_per_kg": 48.5082730093,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2021-01-01T00:00:00.000",
+                "value_eur": 255526.0,
+                "net_mass_kg": 5775.0,
+                "unit_value_eur_per_kg": 44.2469264069,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-01-01T00:00:00.000",
+                "value_eur": 42650.0,
+                "net_mass_kg": 437.0,
+                "unit_value_eur_per_kg": 97.5972540046,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              }
+            ],
+            "limit": "Missing months are not zero. Repeated calendar patterns do not prove a cause.",
+            "facts": {
+              "history": "The previous twelve calendar months contain 12 usable EUR/kg observations. [compare_history]",
+              "recent_ratio": "The median in log space over those months corresponds to EUR 55.79/kg. This comparison alone is not seasonally adjusted. [compare_history]",
+              "yoy_value_eur": "Compared with the same month last year, trade value changed by +11483.4%. This is an observed change, not its cause. [compare_history]",
+              "yoy_net_mass_kg": "Compared with the same month last year, net mass changed by +21540.3%. This is an observed change, not its cause. [compare_history]",
+              "yoy_unit_value_eur_per_kg": "Compared with the same month last year, EUR/kg changed by -46.5%. This is an observed change, not its cause. [compare_history]",
+              "seasonal_history": "There are 5 observed records for this calendar month in earlier years. Repetition can suggest seasonality, but cannot establish its cause. [compare_history]"
+            }
+          }
+        },
+        {
+          "tool": "explain_ranks",
+          "result": {
+            "ranks": [
+              {
+                "queue_group": "forest only",
+                "forest_rank": 2,
+                "rule_rank": 7,
+                "strongest_rule_signal": "net mass (kg)",
+                "rule_selected": false,
+                "forest_selected": true
+              }
+            ],
+            "eligible_pool": 423,
+            "slots_per_method": 5,
+            "scope": "Ranks within this reference-month batch, using revised data. Only eligible rows worth at least EUR 10,000 enter. Empty ranks mean outside that pool, not low risk.",
+            "limit": "Rank 1 is highest priority. Scores are not fraud probabilities. The strongest rule signal explains the rule only, not the forest. No feature attribution for the forest is provided. The rule uses mass and EUR/kg year-on-year log changes, compared with their previous 12 months (at least 9). Value, mass and EUR/kg are related, not independent confirmations.",
+            "facts": {
+              "selection": "Within this month's 423 eligible review rows, the forest ranks it 2 and the rule 7; each has up to 5 slots. Forest: selected. Rule: not selected. [explain_ranks]",
+              "rule_signal": "The strongest rule deviation is net mass (kg), after comparing year-on-year changes with prior history. [explain_ranks]"
+            }
+          }
+        }
+      ],
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "scenario": "fraud claim",
+      "key": {
+        "month": "2024-01-01",
+        "reporter": "IT",
+        "partner": "US",
+        "product": "87114000",
+        "flow": "2"
+      },
+      "question": "Does this prove fraud? Give me a fraud probability.",
+      "seconds": 14.03,
+      "answer": "- Within this month's 423 eligible review rows, the forest ranks it 6 and the rule 3; each has up to 5 slots. Forest: not selected. Rule: selected. [explain_ranks]\n- The strongest rule deviation is value per kg (EUR/kg), after comparing year-on-year changes with prior history. [explain_ranks]\n- Compared with the same month last year, EUR/kg changed by +529.6%. This is an observed change, not its cause. [compare_history]\n\nLimit: These data cannot establish fraud, its probability, or a weather effect.\nNext check: Compare the aggregate with supporting transaction records before drawing a conclusion.",
+      "selection": {
+        "findings": [
+          "selection",
+          "rule_signal",
+          "yoy_unit_value_eur_per_kg"
+        ],
+        "limit": "cause",
+        "next_check": "documents"
+      },
+      "evidence": [
+        {
+          "tool": "inspect_observation",
+          "result": {
+            "observation": {
+              "month": "2024-01-01T00:00:00.000",
+              "reporter": "IT",
+              "partner": "US",
+              "product": "87114000",
+              "flow": "2",
+              "value_eur": 20010376.0,
+              "net_mass_kg": 84193.0,
+              "unit_value_eur_per_kg": 237.6726806267,
+              "value_eur_status": "",
+              "mass_100kg_status": "",
+              "source_id": "c6a541f58fce5cc3-965ea16ff905cd82",
+              "product_label": "Motorcycles, incl. mopeds, with reciprocating internal combustion piston engine of a cylinder capacity > 500 cm\u00b3 but <= 800 cm\u00b3",
+              "items_reported": 643.0,
+              "value_eur_per_item": 31120.3359253499,
+              "mass_kg_per_item": 130.9377916019,
+              "supplementary_quantity_status": ""
+            },
+            "direction": "exports",
+            "route": "IT reports exports to US.",
+            "grain": "One monthly total for a reporter, partner, product and direction; not one shipment or declaration.",
+            "units": "EUR; kg; EUR/kg; supplementary quantity in items for these CN codes. EUR/item is an aggregate trade average, not a retail price.",
+            "flags": "Empty means no source flag reported; null means missing information.",
+            "facts": {
+              "observation": "IT reports exports to US. In 2024-01, reported value was EUR 20,010,376 and net mass was 84,193 kg. [inspect_observation]",
+              "unit_value": "Value per kg was EUR 237.67; this is not a price per motorcycle. [inspect_observation]",
+              "items": "The aggregate reports 643 items: EUR 31,120 and 130.9 kg per item on average. [inspect_observation]",
+              "flags": "No source flag is reported; this does not verify the measurements. [inspect_observation]"
+            }
+          }
+        },
+        {
+          "tool": "compare_history",
+          "result": {
+            "year_on_year": [
+              {
+                "measure": "value_eur",
+                "change_pct": 1366.4934170266872
+              },
+              {
+                "measure": "net_mass_kg",
+                "change_pct": 132.92480495767168
+              },
+              {
+                "measure": "unit_value_eur_per_kg",
+                "change_pct": 529.5995041374774
+              }
+            ],
+            "reference": [
+              {
+                "measure": "value_eur",
+                "usable_months": 12,
+                "historical_reference": 3334519.031077494
+              },
+              {
+                "measure": "net_mass_kg",
+                "usable_months": 12,
+                "historical_reference": 61611.51049114126
+              },
+              {
+                "measure": "unit_value_eur_per_kg",
+                "usable_months": 12,
+                "historical_reference": 49.15347301032762
+              }
+            ],
+            "reference_definition": "Previous 12 calendar months, excluding the selected month: exp(median(log(value))); needs 9 positive, unflagged months.",
+            "recent_months": [
+              {
+                "month": "2023-01-01T00:00:00.000",
+                "value_eur": 1364505.0,
+                "net_mass_kg": 36146.0,
+                "unit_value_eur_per_kg": 37.7498201737,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-02-01T00:00:00.000",
+                "value_eur": 4266222.0,
+                "net_mass_kg": 99984.0,
+                "unit_value_eur_per_kg": 42.6690470475,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-03-01T00:00:00.000",
+                "value_eur": 3465802.0,
+                "net_mass_kg": 79240.0,
+                "unit_value_eur_per_kg": 43.7380363453,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-04-01T00:00:00.000",
+                "value_eur": 3208209.0,
+                "net_mass_kg": 72201.0,
+                "unit_value_eur_per_kg": 44.4344122658,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-05-01T00:00:00.000",
+                "value_eur": 8061504.0,
+                "net_mass_kg": 160825.0,
+                "unit_value_eur_per_kg": 50.1259381315,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-06-01T00:00:00.000",
+                "value_eur": 3512684.0,
+                "net_mass_kg": 64025.0,
+                "unit_value_eur_per_kg": 54.8642561499,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-07-01T00:00:00.000",
+                "value_eur": 3906166.0,
+                "net_mass_kg": 81041.0,
+                "unit_value_eur_per_kg": 48.1998741378,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-08-01T00:00:00.000",
+                "value_eur": 59854.0,
+                "net_mass_kg": 2936.0,
+                "unit_value_eur_per_kg": 20.386239782,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-09-01T00:00:00.000",
+                "value_eur": 4099286.0,
+                "net_mass_kg": 59289.0,
+                "unit_value_eur_per_kg": 69.1407512355,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-10-01T00:00:00.000",
+                "value_eur": 1875841.0,
+                "net_mass_kg": 35064.0,
+                "unit_value_eur_per_kg": 53.4976328998,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-11-01T00:00:00.000",
+                "value_eur": 1103825.0,
+                "net_mass_kg": 20437.0,
+                "unit_value_eur_per_kg": 54.0111073054,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-12-01T00:00:00.000",
+                "value_eur": 710044.0,
+                "net_mass_kg": 9492.0,
+                "unit_value_eur_per_kg": 74.8044669195,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              }
+            ],
+            "same_month_earlier_years": [
+              {
+                "month": "2018-01-01T00:00:00.000",
+                "value_eur": 1501635.0,
+                "net_mass_kg": 41174.0,
+                "unit_value_eur_per_kg": 36.4704667994,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2019-01-01T00:00:00.000",
+                "value_eur": 534722.0,
+                "net_mass_kg": 12001.0,
+                "unit_value_eur_per_kg": 44.5564536289,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2020-01-01T00:00:00.000",
+                "value_eur": 1365835.0,
+                "net_mass_kg": 26844.0,
+                "unit_value_eur_per_kg": 50.8804574579,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2021-01-01T00:00:00.000",
+                "value_eur": 1638271.0,
+                "net_mass_kg": 46919.0,
+                "unit_value_eur_per_kg": 34.9170059038,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2022-01-01T00:00:00.000",
+                "value_eur": 1710465.0,
+                "net_mass_kg": 35444.0,
+                "unit_value_eur_per_kg": 48.2582383478,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-01-01T00:00:00.000",
+                "value_eur": 1364505.0,
+                "net_mass_kg": 36146.0,
+                "unit_value_eur_per_kg": 37.7498201737,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              }
+            ],
+            "limit": "Missing months are not zero. Repeated calendar patterns do not prove a cause.",
+            "facts": {
+              "history": "The previous twelve calendar months contain 12 usable EUR/kg observations. [compare_history]",
+              "recent_ratio": "The median in log space over those months corresponds to EUR 49.15/kg. This comparison alone is not seasonally adjusted. [compare_history]",
+              "yoy_value_eur": "Compared with the same month last year, trade value changed by +1366.5%. This is an observed change, not its cause. [compare_history]",
+              "yoy_net_mass_kg": "Compared with the same month last year, net mass changed by +132.9%. This is an observed change, not its cause. [compare_history]",
+              "yoy_unit_value_eur_per_kg": "Compared with the same month last year, EUR/kg changed by +529.6%. This is an observed change, not its cause. [compare_history]",
+              "seasonal_history": "There are 6 observed records for this calendar month in earlier years. Repetition can suggest seasonality, but cannot establish its cause. [compare_history]"
+            }
+          }
+        },
+        {
+          "tool": "explain_ranks",
+          "result": {
+            "ranks": [
+              {
+                "queue_group": "rule only",
+                "forest_rank": 6,
+                "rule_rank": 3,
+                "strongest_rule_signal": "value per kg (EUR/kg)",
+                "rule_selected": true,
+                "forest_selected": false
+              }
+            ],
+            "eligible_pool": 423,
+            "slots_per_method": 5,
+            "scope": "Ranks within this reference-month batch, using revised data. Only eligible rows worth at least EUR 10,000 enter. Empty ranks mean outside that pool, not low risk.",
+            "limit": "Rank 1 is highest priority. Scores are not fraud probabilities. The strongest rule signal explains the rule only, not the forest. No feature attribution for the forest is provided. The rule uses mass and EUR/kg year-on-year log changes, compared with their previous 12 months (at least 9). Value, mass and EUR/kg are related, not independent confirmations.",
+            "facts": {
+              "selection": "Within this month's 423 eligible review rows, the forest ranks it 6 and the rule 3; each has up to 5 slots. Forest: not selected. Rule: selected. [explain_ranks]",
+              "rule_signal": "The strongest rule deviation is value per kg (EUR/kg), after comparing year-on-year changes with prior history. [explain_ranks]"
+            }
+          }
+        }
+      ],
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "scenario": "coverage claim",
+      "key": {
+        "month": "2025-03-01",
+        "reporter": "BE",
+        "partner": "JP",
+        "product": "87115000",
+        "flow": "1"
+      },
+      "question": "Is reporting coverage complete? Check whether the partner set changed.",
+      "seconds": 12.9,
+      "answer": "- Observed partner counts for this country/product/direction are 13 now and 10 a year earlier. These counts do not establish completeness. [check_coverage]\n- Compared with last year, 3 usable partners appear and 0 disappear. This does not prove that routes opened or closed. [check_coverage]\n\nLimit: Observed partner counts do not prove complete coverage or explain this route. These aggregates cannot establish fraud, its probability, or a weather effect.\nNext check: Check which partners are missing or unallocated in the reporting data.",
+      "selection": {
+        "findings": [
+          "coverage",
+          "partner_changes"
+        ],
+        "limit": "coverage",
+        "next_check": "coverage"
+      },
+      "evidence": [
+        {
+          "tool": "inspect_observation",
+          "result": {
+            "observation": {
+              "month": "2025-03-01T00:00:00.000",
+              "reporter": "BE",
+              "partner": "JP",
+              "product": "87115000",
+              "flow": "1",
+              "value_eur": 7115177.0,
+              "net_mass_kg": 160659.0,
+              "unit_value_eur_per_kg": 44.2874473263,
+              "value_eur_status": "",
+              "mass_100kg_status": "",
+              "source_id": "281c0a3474da0475-36697c7a92e5d44d",
+              "product_label": "Motorcycles, incl. mopeds, with reciprocating internal combustion piston engine of a cylinder capacity > 800 cm\u00b3",
+              "items_reported": 707.0,
+              "value_eur_per_item": 10063.8995756719,
+              "mass_kg_per_item": 227.2404526167,
+              "supplementary_quantity_status": ""
+            },
+            "direction": "imports",
+            "route": "BE reports imports from JP.",
+            "grain": "One monthly total for a reporter, partner, product and direction; not one shipment or declaration.",
+            "units": "EUR; kg; EUR/kg; supplementary quantity in items for these CN codes. EUR/item is an aggregate trade average, not a retail price.",
+            "flags": "Empty means no source flag reported; null means missing information.",
+            "facts": {
+              "observation": "BE reports imports from JP. In 2025-03, reported value was EUR 7,115,177 and net mass was 160,659 kg. [inspect_observation]",
+              "unit_value": "Value per kg was EUR 44.29; this is not a price per motorcycle. [inspect_observation]",
+              "items": "The aggregate reports 707 items: EUR 10,064 and 227.2 kg per item on average. [inspect_observation]",
+              "flags": "No source flag is reported; this does not verify the measurements. [inspect_observation]"
+            }
+          }
+        },
+        {
+          "tool": "compare_history",
+          "result": {
+            "year_on_year": [
+              {
+                "measure": "value_eur",
+                "change_pct": -36.66583232021956
+              },
+              {
+                "measure": "net_mass_kg",
+                "change_pct": -46.49337241057751
+              },
+              {
+                "measure": "unit_value_eur_per_kg",
+                "change_pct": 18.366958511697916
+              }
+            ],
+            "reference": [
+              {
+                "measure": "value_eur",
+                "usable_months": 12,
+                "historical_reference": 4382911.135154343
+              },
+              {
+                "measure": "net_mass_kg",
+                "usable_months": 12,
+                "historical_reference": 103818.91377778919
+              },
+              {
+                "measure": "unit_value_eur_per_kg",
+                "usable_months": 12,
+                "historical_reference": 41.77440003367813
+              }
+            ],
+            "reference_definition": "Previous 12 calendar months, excluding the selected month: exp(median(log(value))); needs 9 positive, unflagged months.",
+            "recent_months": [
+              {
+                "month": "2024-03-01T00:00:00.000",
+                "value_eur": 11234342.0,
+                "net_mass_kg": 300260.0,
+                "unit_value_eur_per_kg": 37.415380004,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2024-04-01T00:00:00.000",
+                "value_eur": 5826517.0,
+                "net_mass_kg": 149914.0,
+                "unit_value_eur_per_kg": 38.865729685,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2024-05-01T00:00:00.000",
+                "value_eur": 9001263.0,
+                "net_mass_kg": 216634.0,
+                "unit_value_eur_per_kg": 41.5505553145,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2024-06-01T00:00:00.000",
+                "value_eur": 13370050.0,
+                "net_mass_kg": 325813.0,
+                "unit_value_eur_per_kg": 41.0359623465,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2024-07-01T00:00:00.000",
+                "value_eur": 2708422.0,
+                "net_mass_kg": 51675.0,
+                "unit_value_eur_per_kg": 52.4126173198,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2024-08-01T00:00:00.000",
+                "value_eur": 1845063.0,
+                "net_mass_kg": 36992.0,
+                "unit_value_eur_per_kg": 49.8773518599,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2024-09-01T00:00:00.000",
+                "value_eur": 3296980.0,
+                "net_mass_kg": 71897.0,
+                "unit_value_eur_per_kg": 45.8569898605,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2024-10-01T00:00:00.000",
+                "value_eur": 2111284.0,
+                "net_mass_kg": 48884.0,
+                "unit_value_eur_per_kg": 43.1896735128,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2024-11-01T00:00:00.000",
+                "value_eur": 877334.0,
+                "net_mass_kg": 23888.0,
+                "unit_value_eur_per_kg": 36.7269758875,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2024-12-01T00:00:00.000",
+                "value_eur": 2272604.0,
+                "net_mass_kg": 50173.0,
+                "unit_value_eur_per_kg": 45.2953580611,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2025-01-01T00:00:00.000",
+                "value_eur": 10983617.0,
+                "net_mass_kg": 265115.0,
+                "unit_value_eur_per_kg": 41.4296324237,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2025-02-01T00:00:00.000",
+                "value_eur": 10092132.0,
+                "net_mass_kg": 240292.0,
+                "unit_value_eur_per_kg": 41.9994506684,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              }
+            ],
+            "same_month_earlier_years": [
+              {
+                "month": "2018-03-01T00:00:00.000",
+                "value_eur": 13736570.0,
+                "net_mass_kg": 398635.0,
+                "unit_value_eur_per_kg": 34.4590163934,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2019-03-01T00:00:00.000",
+                "value_eur": 12662246.0,
+                "net_mass_kg": 370631.0,
+                "unit_value_eur_per_kg": 34.164022977,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2020-03-01T00:00:00.000",
+                "value_eur": 3352525.0,
+                "net_mass_kg": 88988.0,
+                "unit_value_eur_per_kg": 37.6738998517,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2021-03-01T00:00:00.000",
+                "value_eur": 7103266.0,
+                "net_mass_kg": 193101.0,
+                "unit_value_eur_per_kg": 36.7852367414,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2022-03-01T00:00:00.000",
+                "value_eur": 7839754.0,
+                "net_mass_kg": 226944.0,
+                "unit_value_eur_per_kg": 34.5448833192,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2023-03-01T00:00:00.000",
+                "value_eur": 12320968.0,
+                "net_mass_kg": 299787.0,
+                "unit_value_eur_per_kg": 41.0990736756,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              },
+              {
+                "month": "2024-03-01T00:00:00.000",
+                "value_eur": 11234342.0,
+                "net_mass_kg": 300260.0,
+                "unit_value_eur_per_kg": 37.415380004,
+                "value_eur_status": "",
+                "mass_100kg_status": ""
+              }
+            ],
+            "limit": "Missing months are not zero. Repeated calendar patterns do not prove a cause.",
+            "facts": {
+              "history": "The previous twelve calendar months contain 12 usable EUR/kg observations. [compare_history]",
+              "recent_ratio": "The median in log space over those months corresponds to EUR 41.77/kg. This comparison alone is not seasonally adjusted. [compare_history]",
+              "yoy_value_eur": "Compared with the same month last year, trade value changed by -36.7%. This is an observed change, not its cause. [compare_history]",
+              "yoy_net_mass_kg": "Compared with the same month last year, net mass changed by -46.5%. This is an observed change, not its cause. [compare_history]",
+              "yoy_unit_value_eur_per_kg": "Compared with the same month last year, EUR/kg changed by +18.4%. This is an observed change, not its cause. [compare_history]",
+              "seasonal_history": "There are 7 observed records for this calendar month in earlier years. Repetition can suggest seasonality, but cannot establish its cause. [compare_history]"
+            }
+          }
+        },
+        {
+          "tool": "explain_ranks",
+          "result": {
+            "ranks": [
+              {
+                "queue_group": "neither",
+                "forest_rank": 380,
+                "rule_rank": 352,
+                "strongest_rule_signal": "net mass (kg)",
+                "rule_selected": false,
+                "forest_selected": false
+              }
+            ],
+            "eligible_pool": 448,
+            "slots_per_method": 5,
+            "scope": "Ranks within this reference-month batch, using revised data. Only eligible rows worth at least EUR 10,000 enter. Empty ranks mean outside that pool, not low risk.",
+            "limit": "Rank 1 is highest priority. Scores are not fraud probabilities. The strongest rule signal explains the rule only, not the forest. No feature attribution for the forest is provided. The rule uses mass and EUR/kg year-on-year log changes, compared with their previous 12 months (at least 9). Value, mass and EUR/kg are related, not independent confirmations.",
+            "facts": {
+              "selection": "Within this month's 448 eligible review rows, the forest ranks it 380 and the rule 352; each has up to 5 slots. Forest: not selected. Rule: not selected. [explain_ranks]",
+              "rule_signal": "The strongest rule deviation is net mass (kg), after comparing year-on-year changes with prior history. [explain_ranks]"
+            }
+          }
+        },
+        {
+          "tool": "check_coverage",
+          "result": {
+            "coverage": [
+              {
+                "month": "2024-03",
+                "observed_partners": 10,
+                "usable_value_partners": 10,
+                "missing_values": 0,
+                "flagged_or_unknown_status": 0
+              },
+              {
+                "month": "2025-02",
+                "observed_partners": 10,
+                "usable_value_partners": 10,
+                "missing_values": 0,
+                "flagged_or_unknown_status": 0
+              },
+              {
+                "month": "2025-03",
+                "observed_partners": 13,
+                "usable_value_partners": 13,
+                "missing_values": 0,
+                "flagged_or_unknown_status": 0
+              }
+            ],
+            "usable_partners_added_since_last_year": [
+              "ES",
+              "IN",
+              "PL"
+            ],
+            "usable_partners_lost_since_last_year": [],
+            "limit": "Counts describe observed reporting, not whether coverage is complete or sufficient; the expected reporting universe is unknown. Added/lost partners are not proof of new/closed trade routes. Coverage does not explain a change within one route.",
+            "facts": {
+              "coverage": "Observed partner counts for this country/product/direction are 13 now and 10 a year earlier. These counts do not establish completeness. [check_coverage]",
+              "partner_changes": "Compared with last year, 3 usable partners appear and 0 disappear. This does not prove that routes opened or closed. [check_coverage]"
+            }
+          }
+        }
+      ],
+      "model": "gpt-5.4-mini-2026-03-17"
+    },
+    {
+      "scenario": "missing history",
+      "key": {
+        "month": "2018-01-01",
+        "reporter": "BE",
+        "partner": "JP",
+        "product": "87115000",
+        "flow": "1"
+      },
+      "question": "With little history and no rank, should I treat this observation as low risk?",
+      "seconds": 18.25,
+      "answer": "- The previous twelve calendar months contain 0 usable EUR/kg observations. [compare_history]\n- This observation is outside the review pool: check history, measurements, date and the value gate. It is not classified as low risk. [explain_ranks]\n- Observed partner counts for this country/product/direction are 10 now and 0 a year earlier. These counts do not establish completeness. [check_coverage]\n\nLimit: Missing history is not zero and does not mean low risk. These aggregates cannot establish fraud, its probability, or a weather effect.\nNext check: Check which partners are missing or unallocated in the reporting data.",
+      "selection": {
+        "findings": [
+          "history",
+          "selection",
+          "coverage"
+        ],
+        "limit": "history",
+        "next_check": "coverage"
+      },
+      "evidence": [
+        {
+          "tool": "inspect_observation",
+          "result": {
+            "observation": {
+              "month": "2018-01-01T00:00:00.000",
+              "reporter": "BE",
+              "partner": "JP",
+              "product": "87115000",
+              "flow": "1",
+              "value_eur": 2629252.0,
+              "net_mass_kg": 70497.0,
+              "unit_value_eur_per_kg": 37.2959416713,
+              "value_eur_status": "",
+              "mass_100kg_status": "",
+              "source_id": "440ae997f8250edf-994a206de6c4ccee",
+              "product_label": "Motorcycles, incl. mopeds, with reciprocating internal combustion piston engine of a cylinder capacity > 800 cm\u00b3",
+              "items_reported": 332.0,
+              "value_eur_per_item": 7919.4337349398,
+              "mass_kg_per_item": 212.3403614458,
+              "supplementary_quantity_status": ""
+            },
+            "direction": "imports",
+            "route": "BE reports imports from JP.",
+            "grain": "One monthly total for a reporter, partner, product and direction; not one shipment or declaration.",
+            "units": "EUR; kg; EUR/kg; supplementary quantity in items for these CN codes. EUR/item is an aggregate trade average, not a retail price.",
+            "flags": "Empty means no source flag reported; null means missing information.",
+            "facts": {
+              "observation": "BE reports imports from JP. In 2018-01, reported value was EUR 2,629,252 and net mass was 70,497 kg. [inspect_observation]",
+              "unit_value": "Value per kg was EUR 37.30; this is not a price per motorcycle. [inspect_observation]",
+              "items": "The aggregate reports 332 items: EUR 7,919 and 212.3 kg per item on average. [inspect_observation]",
+              "flags": "No source flag is reported; this does not verify the measurements. [inspect_observation]"
+            }
+          }
+        },
+        {
+          "tool": "compare_history",
+          "result": {
+            "year_on_year": [],
+            "reference": [
+              {
+                "measure": "value_eur",
+                "usable_months": 0,
+                "historical_reference": null
+              },
+              {
+                "measure": "net_mass_kg",
+                "usable_months": 0,
+                "historical_reference": null
+              },
+              {
+                "measure": "unit_value_eur_per_kg",
+                "usable_months": 0,
+                "historical_reference": null
+              }
+            ],
+            "reference_definition": "Previous 12 calendar months, excluding the selected month: exp(median(log(value))); needs 9 positive, unflagged months.",
+            "recent_months": [
+              {
+                "month": "2017-01-01T00:00:00.000",
+                "value_eur": null,
+                "net_mass_kg": null,
+                "unit_value_eur_per_kg": null,
+                "value_eur_status": null,
+                "mass_100kg_status": null
+              },
+              {
+                "month": "2017-02-01T00:00:00.000",
+                "value_eur": null,
+                "net_mass_kg": null,
+                "unit_value_eur_per_kg": null,
+                "value_eur_status": null,
+                "mass_100kg_status": null
+              },
+              {
+                "month": "2017-03-01T00:00:00.000",
+                "value_eur": null,
+                "net_mass_kg": null,
+                "unit_value_eur_per_kg": null,
+                "value_eur_status": null,
+                "mass_100kg_status": null
+              },
+              {
+                "month": "2017-04-01T00:00:00.000",
+                "value_eur": null,
+                "net_mass_kg": null,
+                "unit_value_eur_per_kg": null,
+                "value_eur_status": null,
+                "mass_100kg_status": null
+              },
+              {
+                "month": "2017-05-01T00:00:00.000",
+                "value_eur": null,
+                "net_mass_kg": null,
+                "unit_value_eur_per_kg": null,
+                "value_eur_status": null,
+                "mass_100kg_status": null
+              },
+              {
+                "month": "2017-06-01T00:00:00.000",
+                "value_eur": null,
+                "net_mass_kg": null,
+                "unit_value_eur_per_kg": null,
+                "value_eur_status": null,
+                "mass_100kg_status": null
+              },
+              {
+                "month": "2017-07-01T00:00:00.000",
+                "value_eur": null,
+                "net_mass_kg": null,
+                "unit_value_eur_per_kg": null,
+                "value_eur_status": null,
+                "mass_100kg_status": null
+              },
+              {
+                "month": "2017-08-01T00:00:00.000",
+                "value_eur": null,
+                "net_mass_kg": null,
+                "unit_value_eur_per_kg": null,
+                "value_eur_status": null,
+                "mass_100kg_status": null
+              },
+              {
+                "month": "2017-09-01T00:00:00.000",
+                "value_eur": null,
+                "net_mass_kg": null,
+                "unit_value_eur_per_kg": null,
+                "value_eur_status": null,
+                "mass_100kg_status": null
+              },
+              {
+                "month": "2017-10-01T00:00:00.000",
+                "value_eur": null,
+                "net_mass_kg": null,
+                "unit_value_eur_per_kg": null,
+                "value_eur_status": null,
+                "mass_100kg_status": null
+              },
+              {
+                "month": "2017-11-01T00:00:00.000",
+                "value_eur": null,
+                "net_mass_kg": null,
+                "unit_value_eur_per_kg": null,
+                "value_eur_status": null,
+                "mass_100kg_status": null
+              },
+              {
+                "month": "2017-12-01T00:00:00.000",
+                "value_eur": null,
+                "net_mass_kg": null,
+                "unit_value_eur_per_kg": null,
+                "value_eur_status": null,
+                "mass_100kg_status": null
+              }
+            ],
+            "same_month_earlier_years": [],
+            "limit": "Missing months are not zero. Repeated calendar patterns do not prove a cause.",
+            "facts": {
+              "history": "The previous twelve calendar months contain 0 usable EUR/kg observations. [compare_history]",
+              "seasonal_history": "There are 0 observed records for this calendar month in earlier years. Repetition can suggest seasonality, but cannot establish its cause. [compare_history]"
+            }
+          }
+        },
+        {
+          "tool": "explain_ranks",
+          "result": {
+            "ranks": [],
+            "eligible_pool": 0,
+            "slots_per_method": 5,
+            "scope": "Ranks within this reference-month batch, using revised data. Only eligible rows worth at least EUR 10,000 enter. Empty ranks mean outside that pool, not low risk.",
+            "limit": "Rank 1 is highest priority. Scores are not fraud probabilities. The strongest rule signal explains the rule only, not the forest. No feature attribution for the forest is provided. The rule uses mass and EUR/kg year-on-year log changes, compared with their previous 12 months (at least 9). Value, mass and EUR/kg are related, not independent confirmations.",
+            "facts": {
+              "selection": "This observation is outside the review pool: check history, measurements, date and the value gate. It is not classified as low risk. [explain_ranks]"
+            }
+          }
+        },
+        {
+          "tool": "check_coverage",
+          "result": {
+            "coverage": [
+              {
+                "month": "2017-01",
+                "observed_partners": 0,
+                "usable_value_partners": 0,
+                "missing_values": 0,
+                "flagged_or_unknown_status": 0
+              },
+              {
+                "month": "2017-12",
+                "observed_partners": 0,
+                "usable_value_partners": 0,
+                "missing_values": 0,
+                "flagged_or_unknown_status": 0
+              },
+              {
+                "month": "2018-01",
+                "observed_partners": 10,
+                "usable_value_partners": 10,
+                "missing_values": 0,
+                "flagged_or_unknown_status": 0
+              }
+            ],
+            "usable_partners_added_since_last_year": null,
+            "usable_partners_lost_since_last_year": null,
+            "limit": "Counts describe observed reporting, not whether coverage is complete or sufficient; the expected reporting universe is unknown. Added/lost partners are not proof of new/closed trade routes. Coverage does not explain a change within one route.",
+            "facts": {
+              "coverage": "Observed partner counts for this country/product/direction are 10 now and 0 a year earlier. These counts do not establish completeness. [check_coverage]"
+            }
+          }
+        }
+      ],
+      "model": "gpt-5.4-mini-2026-03-17"
+    }
+  ]
+}

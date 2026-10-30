@@ -97,33 +97,40 @@ def save_json(path, value):
     path.write_text(json.dumps(value, indent=2, allow_nan=False, default=str) + "\n")
 
 
-def save_prepared(root, trade, checks):
+def save_prepared(root, trade, checks, totals):
     folder = Path(root) / "data/processed"
     folder.mkdir(parents=True, exist_ok=True)
     trade.to_parquet(folder / "trade.parquet", index=False)
+    totals.to_parquet(folder / "country_totals.parquet", index=False)
     checks.to_csv(folder / "quality_checks.csv", index=False)
     save_json(
         folder / "prepared_manifest.json",
         {
+            "schema_version": 2,
             "source_manifest_sha256": sha256(Path(root) / "data/source_manifest.json"),
             "files": {
-                name: sha256(folder / name) for name in ["trade.parquet", "quality_checks.csv"]
+                name: sha256(folder / name)
+                for name in ["trade.parquet", "country_totals.parquet", "quality_checks.csv"]
             },
             "trade_rows": len(trade),
         },
     )
 
 
-def load_prepared(root):
+def load_prepared(root, table="trade"):
+    if table not in {"trade", "country_totals"}:
+        raise ValueError("Choose trade or country_totals.")
     folder = Path(root) / "data/processed"
     if not (folder / "prepared_manifest.json").exists():
         raise FileNotFoundError(
             "Run notebook 01 from top to bottom to create the checked analysis tables."
         )
     metadata = json.loads((folder / "prepared_manifest.json").read_text())
+    if metadata.get("schema_version") != 2:
+        raise ValueError("Prepared tables use an older scope. Rerun notebook 01.")
     if metadata["source_manifest_sha256"] != sha256(Path(root) / "data/source_manifest.json"):
         raise ValueError("Source inventory changed. Rerun notebook 01.")
     for name, expected in metadata["files"].items():
         if sha256(folder / name) != expected:
             raise ValueError(f"Prepared file changed: {name}. Rerun notebook 01.")
-    return pd.read_parquet(folder / "trade.parquet")
+    return pd.read_parquet(folder / f"{table}.parquet")
